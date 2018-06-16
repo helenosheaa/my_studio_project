@@ -35,6 +35,12 @@ class Instructor
     SqlRunner.run(sql, values)
   end
 
+  def self.all()
+    sql = "SELECT * FROM instructors"
+    results = SqlRunner.run( sql )
+    return results.map { |instructor| Instructor.new( instructor ) }
+  end
+
   def self.delete_all()
     sql = "DELETE FROM instructors"
     SqlRunner.run( sql )
