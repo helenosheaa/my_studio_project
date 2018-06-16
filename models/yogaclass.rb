@@ -50,4 +50,13 @@ class YogaClass
     SqlRunner.run( sql )
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM yogaclasses
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql ,values).first
+    yogaclass = YogaClass.new(result)
+    return yogaclass
+  end
+
 end
