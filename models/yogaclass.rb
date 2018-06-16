@@ -39,6 +39,12 @@ class YogaClass
   SqlRunner.run(sql, values)
   end
 
+  def self.all()
+    sql = "SELECT * FROM yogaclasses"
+    results = SqlRunner.run( sql )
+    return results.map { |yogaclass| YogaClass.new( yogaclass ) }
+  end
+
   def self.delete_all()
     sql = "DELETE FROM yogaclasses"
     SqlRunner.run( sql )
