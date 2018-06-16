@@ -32,4 +32,16 @@ class YogaClass
     @id = results.first()['id'].to_i
   end
 
+  def delete()
+  sql = "DELETE FROM yogaclasses
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run(sql, values)
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM yogaclasses"
+    SqlRunner.run( sql )
+  end
+
 end

@@ -4,20 +4,28 @@ require_relative( "../models/yogaclass.rb" )
 require_relative( "../models/member.rb" )
 require("pry-byebug")
 
+Booking.delete_all()
+Member.delete_all()
+YogaClass.delete_all()
+Instructor.delete_all()
+
 instructor1 = Instructor.new({
-  "name" => "Stacy",
+  "first_name" => "Stacy",
+  "last_name" => "Hardy",
   "speciality" => "Ashtanga"
 })
 instructor1.save()
 
 instructor2 = Instructor.new({
-  "name" => "Amanda",
+  "first_name" => "Amanda",
+  "last_name" => "Coates",
   "speciality" => "Yin"
 })
 instructor2.save()
 
 instructor3 = Instructor.new({
-  "name" => "Cat",
+  "first_name" => "Cat",
+  "last_name" => "Johnstone",
   "speciality" => "Power"
 })
 instructor3.save()
