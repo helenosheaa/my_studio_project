@@ -55,4 +55,11 @@ class Instructor
     return instructor
   end
 
+  def self.destroy(id)
+    sql = "DELETE FROM instructors
+    WHERE id = $1"
+    values = [id]
+    SqlRunner.run( sql, values )
+  end
+
 end

@@ -59,4 +59,11 @@ class YogaClass
     return yogaclass
   end
 
+  def self.destroy(id)
+    sql = "DELETE FROM yogaclasses
+    WHERE id = $1"
+    values = [id]
+    SqlRunner.run( sql, values )
+  end
+
 end
