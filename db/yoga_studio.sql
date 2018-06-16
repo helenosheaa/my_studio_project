@@ -23,7 +23,8 @@ CREATE TABLE yogaclasses
 CREATE TABLE members
 (
   id SERIAL8 primary key,
-  name VARCHAR(255),
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
   level VARCHAR(255)
 );
 
