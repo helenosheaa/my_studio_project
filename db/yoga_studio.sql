@@ -6,7 +6,8 @@ DROP TABLE instructors;
 CREATE TABLE instructors
 (
   id SERIAL8 primary key,
-  name VARCHAR(255),
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
   speciality VARCHAR(255)
 );
 
@@ -17,7 +18,7 @@ CREATE TABLE yogaclasses
   time VARCHAR(255),
   duration VARCHAR(255),
   level VARCHAR(255),
-  instructor_id INT8 references instructors(id)
+  instructor_id INT8 REFERENCES instructors(id)
 );
 
 CREATE TABLE members
@@ -30,7 +31,7 @@ CREATE TABLE members
 
 CREATE TABLE bookings
 (
-  id SERIAL8 primary key,
-  member_id INT8 references members(id),
-  yogaclass_id INT8 references yogaclasses(id)
+  id SERIAL8 PRIMARY KEY,
+  member_id INT8 REFERENCES members(id),
+  yogaclass_id INT8 REFERENCES yogaclasses(id)
 );
