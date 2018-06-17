@@ -11,13 +11,18 @@ get '/bookings' do
   erb ( :"bookings/index" )
 end
 
-get '/bookings/:id' do
-  @booking = Booking.find(params['id'].to_i)
-  erb( :"bookings/show" )
-end
-
 get '/bookings/new' do
   @members = Member.all
   @yogaclasses = YogaClass.all
   erb(:"bookings/new")
+end
+
+post '/bookings' do
+  Booking.new(params).save
+  redirect to ( "/bookings" )
+end
+
+get '/bookings/:id' do
+  @booking = Booking.find(params['id'].to_i)
+  erb( :"bookings/show" )
 end

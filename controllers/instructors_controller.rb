@@ -1,7 +1,6 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/instructor.rb' )
-require_relative( '../models/yogaclass.rb' )
 also_reload( '../models/*' )
 
 get '/instructors' do
