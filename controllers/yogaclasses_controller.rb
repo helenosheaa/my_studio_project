@@ -10,12 +10,17 @@ get '/yogaclasses' do
   erb ( :"yogaclasses/index" )
 end
 
+get '/yogaclasses/new' do
+  @yogaclasses = YogaClass.all
+  erb( :"yogaclasses/new" )
+end
+
+post '/yogaclasses' do
+  YogaClass.new(params).save
+  redirect to ( "/yogaclasses" )
+end
+
 get '/yogaclasses/:id' do
   @yogaclass = YogaClass.find(params['id'].to_i)
   erb( :"yogaclasses/show" )
-end
-
-get '/yogaclasses/new' do
-  @yogaclasses = YogaClass.all
-  erb( :new )
 end

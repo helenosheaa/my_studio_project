@@ -1,1 +1,15 @@
 <h4>Yoga Classes</h4>
+
+<div id="yogaclass-wrapper">
+  <% @yogaclasses.each do |yogaclass| %>
+
+  <div class="yogaclass">
+    <h3><a href="/yogaclass/<%= yogaclass.id %>"><%= yogaclass.name.capitalize %></a></h3>
+    <p>Time: <%= yogaclass.time %></p>
+    <p>Duration: <%= yogaclass.time %></p>
+    <p>Level: <%= yogaclass.level %></p>
+    <p>Instructor: <%=yogaclass.instructor_id%></p>
+  </div>
+
+  <% end %>
+</div>
