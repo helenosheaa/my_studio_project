@@ -35,6 +35,13 @@ class Member
   SqlRunner.run(sql, values)
   end
 
+  def yogaclasses()
+    sql = "SELECT y.* FROM yogaclasses y INNER JOIN bookings b ON b.yogaclass_id = y.id WHERE b.member_id = $1;"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |yogaclass| YogaClass.new(yogaclass) }
+  end
+
   def self.delete_all()
     sql = "DELETE FROM members"
     SqlRunner.run( sql )
