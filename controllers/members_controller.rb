@@ -12,3 +12,8 @@ get '/members/:id' do
   @member = Member.find(params['id'].to_i)
   erb( :"members/show" )
 end
+
+get '/members/new' do
+  @members = Member.all
+  erb( :new )
+end
