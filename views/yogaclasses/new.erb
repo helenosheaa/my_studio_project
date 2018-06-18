@@ -18,8 +18,12 @@
     </div>
 
     <div class="form-el">
-      <label for="level">Level:</label>
-      <input type="text" name="level" id="level"/>
+      <label for="level">Select Level:</label>
+      <select name="level" id="level">
+          <% @yogaclasses.each do |yogaclass| %>
+              <option value=<%= yogaclass.id %>><%= yogaclass.level.capitalize %></option>
+          <% end %>
+        </select>
     </div>
 
     <div class="form-el">

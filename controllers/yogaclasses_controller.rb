@@ -11,7 +11,8 @@ get '/yogaclasses' do
 end
 
 get '/yogaclasses/new' do
-  @instructors = Instructor.all
+  @instructors = Instructor.all()
+  @yogaclasses = YogaClass.all()
   erb( :"yogaclasses/new" )
 end
 
