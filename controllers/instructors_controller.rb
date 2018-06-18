@@ -24,6 +24,7 @@ get '/instructors/:id' do
 end
 
 get '/instructors/:id/edit' do
+  @specialities = Speciality.all()
   @instructor = Instructor.find(params['id'].to_i)
   erb(:"instructors/edit")
 end

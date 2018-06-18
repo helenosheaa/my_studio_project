@@ -1,0 +1,56 @@
+<h2>Edit Yoga Class <%= @yogaclass.name  %> </h2>
+<form method="POST" action="/yogaclasses/">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="name">Select Class:</label>
+      <select name="name" id="name" selected="<%= @yogaclass.name  %>">
+          <% @yogaclasses.each do |yogaclass| %>
+          <%= if yogaclass.name == yogaclass.name  %>
+              <option value=<%= yogaclass.name %>selected><%= yogaclass.name.capitalize%></option>
+          <% end %>
+          <% end %>
+        </select>
+    </div>
+
+    <div class="form-el">
+      <label for="time">Time:</label>
+      <input type="text" name="time" id="time" value="<%= @yogaclass.time  %>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="duration">Duration:</label>
+      <input type="text" name="duration" id="duration" value="<%= @yogaclass.duration  %>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="level">Select Level:</label>
+      <select name="level" id="level" selected="<%= @yogaclass.level %>">
+          <% @yogaclasses.each do |yogaclass| %>
+              <option value=<%= yogaclass.level %>selected><%= yogaclass.level.capitalize %></option>
+              <% else  %>
+              <option value=<%= yogaclass.level %>><%= yogaclass.level.capitalize %></option>
+          <% end %>
+          <% end %>
+        </select>
+    </div>
+
+    <div class="form-el">
+      <label for="instructor_select">Select Instructor:</label>
+      <select name="instructor_id" id="instructor_select" selected="<%= @yogaclass.instructor_id  %>">
+          <% @instructors.each do |instructor| %>
+          <% if instructor.id == @yogaclass.instructor_id  %>
+              <option value=<%= instructor.id %>selected><%= instructor.first_name.capitalize %></option>
+              <% else  %>
+              <option value=<%= instructor.id %>><%= instructor.first_name.capitalize %></option>
+          <% end %>
+          <% end %>
+        </select>
+    </div>
+
+    <div class="form-el">
+      <input type="submit" value="Edit Yoga Class"/>
+    </div>
+
+  </div>
+</form>

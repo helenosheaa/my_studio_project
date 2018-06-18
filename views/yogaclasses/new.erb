@@ -3,8 +3,8 @@
   <div class="form-wrapper">
 
     <div class="form-el">
-      <label for="level">Select Class:</label>
-      <select name="level" id="level">
+      <label for="name">Select Class:</label>
+      <select name="name" id="name">
           <% @yogaclasses.each do |yogaclass| %>
               <option value=<%= yogaclass.name %>><%= yogaclass.name%></option>
           <% end %>

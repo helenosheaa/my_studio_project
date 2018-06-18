@@ -1,4 +1,4 @@
-<h2>Edit Booking</h2>
+<h2>Edit Booking</h2> <%= @booking.id  %></h2>
 <form method="POST" action="/bookings/<%= @booking.id  %>">
   <div class="form-wrapper">
 
@@ -6,7 +6,7 @@
     <label for="member_select">Select Member:</label>
     <select name="member_id" id="member_select" selected="<%= @booking.member_id  %>">
       <% @members.each do |member| %>
-        <% if member.id == @booking.member_id %>
+        <% if member.id == booking.member_id %>
           <option value=<%= member.id %> selected><%= member.first_name.capitalize %></option>
         <% else %>
           <option value=<%= member.id %>><%= member.first_name.capitalize %></option>
@@ -16,16 +16,18 @@
   </div>
 
     <div class="form-el">
-        <label for="yogaclass_id">Select Yoga Class:</label>
-        <select name="yogaclass_id" id="yogaclass_select">
+        <label for="yogaclass_select">Select Yoga Class:</label>
+        <select name="yogaclass_id" id="yogaclass_select" selected="<%= @booking.yogaclass_id  %>">
           <% @yogaclasses.each do |yogaclass| %>
-              <option value=<%= yogaclass.id %>><%= yogaclass.name.capitalize %></option>
+          <% if yogaclass.id == @booking.yogaclass_id  %>
+              <option value=<%= yogaclass.id %>selected><%= yogaclass.name.capitalize %></option>
+          <% end %>
           <% end %>
         </select>
       </div>
 
     <div class="form-el">
-      <input type="submit" value="Add Booking"/>
+      <input type="submit" value="Edit Booking"/>
     </div>
 
   </div>

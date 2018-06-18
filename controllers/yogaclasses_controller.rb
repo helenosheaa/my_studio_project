@@ -27,6 +27,17 @@ get '/yogaclasses/:id' do
 end
 
 
+get '/yogaclasses/:id/edit' do
+  @yogaclass = YogaClass.find(params['id'].to_i)
+  erb(:"yogaclasses/edit")
+end
+
+post '/yogaclasses/:id' do
+  yogaclass = YogaClass.new(params)
+  yogaclass.update
+  redirect to ("/yogaclasses/#{params['id']}")
+end
+
 post '/yogaclasses/:id/delete' do
   YogaClass.destroy(params[:id].to_i)
   redirect to ("/yogaclasses")

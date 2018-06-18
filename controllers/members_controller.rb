@@ -23,6 +23,18 @@ get '/members/:id' do
   erb( :"members/show" )
 end
 
+
+get '/members/:id/edit' do
+  @member = Member.find(params['id'].to_i)
+  erb(:"members/edit")
+end
+
+post '/members/:id' do
+  member = Member.new(params)
+  member.update
+  redirect to ("/members/#{params['id']}")
+end
+
 post '/members/:id/delete' do
   Member.destroy(params[:id].to_i)
   redirect to ("/members")

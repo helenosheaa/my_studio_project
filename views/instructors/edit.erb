@@ -1,0 +1,33 @@
+<h2>Edit Instructor</h2> <%= @instructor.first_name  %></h2>
+<form method="POST" action="/instructors/<%= @instructor.id  %>">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="first_name">First Name:</label>
+      <input type="text" name="first_name" id="first_name" value= "<%= @instructor.first_name%>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="last_name">Last Name:</label>
+      <input type="text" name="last_name" id="last_name" value= "<%= @instructor.last_name%>"/>
+    </div>
+
+    <div class="form-el">
+        <label for="speciality_select">Speciality:</label>
+        <select name="speciality" id="speciality_select" selected= "<%= @instructor.speciality %>">
+          <% @instructors.each do |instructor| %>
+          <%= if instructor.speciality == @instructor.speciality %>
+              <option value=<%= instructor.speciality %> selected><%= instructor.speciality.capitalize %></option>
+              <% else  %>
+              <option value=<%= instructor.speciality %><%= instructor.speciality.capitalize %></option>
+              <% end %>
+          <% end %>
+        </select>
+      </div>
+
+    <div class="form-el">
+      <input type="submit" value="Edit Instructor"/>
+    </div>
+
+  </div>
+</form>
