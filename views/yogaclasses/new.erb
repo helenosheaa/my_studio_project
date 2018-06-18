@@ -3,8 +3,12 @@
   <div class="form-wrapper">
 
     <div class="form-el">
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name"/>
+      <label for="name">Select Class:</label>
+      <select name="name" id="name">
+          <% @yogaclasses.each do |yogaclass| %>
+              <option value=<%= yogaclass.id %>><%= yogaclass.name.capitalize %></option>
+          <% end %>
+        </select>
     </div>
 
     <div class="form-el">

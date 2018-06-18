@@ -22,3 +22,8 @@ get '/members/:id' do
   @member = Member.find(params['id'].to_i)
   erb( :"members/show" )
 end
+
+post '/members/:id/delete' do
+  Member.destroy(params[:id].to_i)
+  redirect to ("/members")
+end

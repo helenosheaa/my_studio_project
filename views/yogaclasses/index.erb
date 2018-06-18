@@ -10,6 +10,7 @@
     <p>Level: <%= yogaclass.level %></p>
     <p>Instructor: <%=yogaclass.instructor.first_name%></p>
   </div>
-
+  <form action="/yogaclasses/<%= yogaclass.id %>/delete" method="POST">
+  <input type="submit" value="Delete"/></form>
   <% end %>
 </div>
