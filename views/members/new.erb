@@ -13,9 +13,13 @@
     </div>
 
     <div class="form-el">
-      <label for="level">Level:</label>
-      <input type="text" name="level" id="level"/>
-    </div>
+        <label for="level">Level:</label>
+        <select name="level" id="level">
+          <% @members.each do |member| %>
+              <option value=<%= member.id %>><%= member.level.capitalize %></option>
+          <% end %>
+        </select>
+      </div>
 
     <div class="form-el">
       <input type="submit" value="Add Member"/>
