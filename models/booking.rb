@@ -26,6 +26,16 @@ class Booking
     @id = results.first()['id'].to_i
   end
 
+  def member()
+    member = Member.find(@member_id)
+    return member
+  end
+
+  def yogaclass()
+    yogaclass = YogaClass.find(@yogaclass_id)
+    return yogaclass
+  end
+
   def delete()
     sql = "DELETE FROM bookings
     WHERE id = $1"
