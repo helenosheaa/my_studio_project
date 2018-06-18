@@ -3,10 +3,10 @@
   <div class="form-wrapper">
 
     <div class="form-el">
-      <label for="name">Select Class:</label>
-      <select name="name" id="name">
+      <label for="level">Select Class:</label>
+      <select name="level" id="level">
           <% @yogaclasses.each do |yogaclass| %>
-              <option value=<%= yogaclass.id %>><%= yogaclass.name.capitalize %></option>
+              <option value=<%= yogaclass.name %>><%= yogaclass.name%></option>
           <% end %>
         </select>
     </div>
@@ -25,7 +25,7 @@
       <label for="level">Select Level:</label>
       <select name="level" id="level">
           <% @yogaclasses.each do |yogaclass| %>
-              <option value=<%= yogaclass.id %>><%= yogaclass.level.capitalize %></option>
+              <option value=<%= yogaclass.level %>><%= yogaclass.level %></option>
           <% end %>
         </select>
     </div>

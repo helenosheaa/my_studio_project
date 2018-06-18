@@ -4,7 +4,7 @@
   <% @yogaclasses.each do |yogaclass| %>
 
   <div class="yogaclass">
-    <h3><a href="/yogaclasses/<%= yogaclass.id %>"><%= yogaclass.name.capitalize %></a></h3>
+    <h3><a href="/yogaclasses/<%= yogaclass.id %>"><%= yogaclass.name %></a></h3>
     <p>Time: <%= yogaclass.time %></p>
     <p>Duration: <%= yogaclass.duration %></p>
     <p>Level: <%= yogaclass.level %></p>

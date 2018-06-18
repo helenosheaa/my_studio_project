@@ -6,7 +6,7 @@
         <label for="member_id">Select Member:</label>
         <select name="member_id" id="member_select">
           <% @members.each do |member| %>
-              <option value=<%= member.id %>><%= member.first_name.capitalize %></option>
+              <option value=<%= member.id %>><%= member.first_name %></option>
           <% end %>
         </select>
       </div>
@@ -15,7 +15,7 @@
         <label for="yogaclass_id">Select Yoga Class:</label>
         <select name="yogaclass_id" id="yogaclass_select">
           <% @yogaclasses.each do |yogaclass| %>
-              <option value=<%= yogaclass.id %>><%= yogaclass.name.capitalize %></option>
+              <option value=<%= yogaclass.id %>><%= yogaclass.name %></option>
           <% end %>
         </select>
       </div>
