@@ -39,6 +39,13 @@ class YogaClass
   SqlRunner.run(sql, values)
   end
 
+  def instructor()
+    sql = "SELECT * FROM instructors WHERE id =$1"
+    values = [@instructor_id]
+    instructor = SqlRunner.run(sql, values)
+    return instructor.map { |instructor| Instructor.new(instructor)}.first()
+  end
+
   def members()
     sql = "SELECT m.* FROM members m INNER JOIN bookings b ON b.member_id = m.id WHERE b.yogaclass_id = $1;"
     values = [@id]

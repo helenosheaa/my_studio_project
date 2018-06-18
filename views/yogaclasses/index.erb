@@ -6,9 +6,9 @@
   <div class="yogaclass">
     <h3><a href="/yogaclass/<%= yogaclass.id %>"><%= yogaclass.name.capitalize %></a></h3>
     <p>Time: <%= yogaclass.time %></p>
-    <p>Duration: <%= yogaclass.time %></p>
+    <p>Duration: <%= yogaclass.duration %></p>
     <p>Level: <%= yogaclass.level %></p>
-    <p>Instructor: <%=yogaclass.instructor_id%></p>
+    <p>Instructor: <%=yogaclass.instructor.first_name%></p>
   </div>
 
   <% end %>
