@@ -4,7 +4,7 @@
   <% @members.each do |member| %>
 
   <div class="member">
-    <h3><a href="/member/<%= member.id %>"><%= member.first_name.capitalize %></a></h3>
+    <h3><a href="/members/<%= member.id %>"><%= member.first_name.capitalize %></a></h3>
     <p>Level: <%= member.level.capitalize %></p>
   </div>
   <form action="/members/<%= member.id %>/delete" method="POST">

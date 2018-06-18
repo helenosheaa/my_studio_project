@@ -27,6 +27,18 @@ get '/bookings/:id' do
   erb( :"bookings/show" )
 end
 
+get '/bookings/:id/edit' do
+  @members = Member.all
+  @yogaclass = YogaClass.find(params['id'].to_i)
+  erb(:"bookings/edit")
+end
+
+post '/bookings/:id' do
+  booking = Booking.new(params)
+  booking.update
+  redirect to ("/bookings/#{params['id']}")
+end
+
 post '/bookings/:id/delete' do
   Booking.destroy(params[:id].to_i)
   redirect to ("/bookings")

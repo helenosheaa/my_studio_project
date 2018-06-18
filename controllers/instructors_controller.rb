@@ -23,6 +23,17 @@ get '/instructors/:id' do
   erb( :"instructors/show" )
 end
 
+get '/instructors/:id/edit' do
+  @instructor = Instructor.find(params['id'].to_i)
+  erb(:"instructors/edit")
+end
+
+post '/instructors/:id' do
+  instructor = Instructor.new(params)
+  instructor.update
+  redirect to ("/instructors/#{params['id']}")
+end
+
 post '/instructors/:id/delete' do
   Instructor.destroy(params[:id].to_i)
   redirect to ("/instructors")
