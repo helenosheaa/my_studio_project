@@ -24,6 +24,6 @@ get '/instructors/:id' do
 end
 
 post '/instructors/:id/delete' do
-  Instructor.destroy(params[:id])
+  Instructor.destroy(params[:id].to_i)
   redirect to ("/instructors")
 end

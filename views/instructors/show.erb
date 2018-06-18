@@ -1,5 +1,3 @@
 <h2><%= @instructor.first_name %></h2>
 
 <p>Speciality: <%= @instructor.speciality.capitalize %></p>
-
-<form action="/instructors/<%= @instructor.id %>/delete" method="POST"><input type="submit" value="Delete Instructor"></form>

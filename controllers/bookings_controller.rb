@@ -26,3 +26,8 @@ get '/bookings/:id' do
   @booking = Booking.find(params['id'].to_i)
   erb( :"bookings/show" )
 end
+
+post '/bookings/:id/delete' do
+  Booking.destroy(params[:id].to_i)
+  redirect to ("/bookings")
+end
