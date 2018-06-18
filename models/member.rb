@@ -42,6 +42,22 @@ class Member
     return results.map { |yogaclass| YogaClass.new(yogaclass) }
   end
 
+  def update()
+  sql = "UPDATE members
+  SET
+  (
+    first_name,
+    last_name,
+    level
+  ) =
+  (
+    $1, $2, $3
+  )
+  WHERE id = $4"
+  values = [@first_name, @last_name, @level, @id]
+  SqlRunner.run(sql, values)
+end
+
   def self.delete_all()
     sql = "DELETE FROM members"
     SqlRunner.run( sql )

@@ -35,6 +35,22 @@ class Instructor
     SqlRunner.run(sql, values)
   end
 
+  def update()
+  sql = "UPDATE instructors
+  SET
+  (
+    first_name,
+    last_name,
+    speciality
+  ) =
+  (
+    $1, $2, $3
+  )
+  WHERE id = $4"
+  values = [@first_name, @last_name, @speciality, @id]
+  SqlRunner.run(sql, values)
+end
+
   def self.all()
     sql = "SELECT * FROM instructors"
     results = SqlRunner.run( sql )

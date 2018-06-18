@@ -35,7 +35,7 @@ end
 
 post '/bookings/:id' do
   booking = Booking.new(params)
-  booking.update
+  booking.update()
   redirect to ("/bookings/#{params['id']}")
 end
 

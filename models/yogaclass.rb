@@ -53,6 +53,24 @@ class YogaClass
     return results.map { |member| Member.new(member) }
   end
 
+  def update()
+  sql = "UPDATE yogaclasses
+  SET
+  (
+    name,
+    time,
+    duration,
+    level,
+    instructor_id
+  ) =
+  (
+    $1, $2, $3, $4, $5
+  )
+  WHERE id = $6"
+  values = [@name, @time, @duration, @level, @instructor_id, @id]
+  SqlRunner.run(sql, values)
+end
+
   def self.all()
     sql = "SELECT * FROM yogaclasses"
     results = SqlRunner.run( sql )
