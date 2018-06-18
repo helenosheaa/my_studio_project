@@ -13,9 +13,13 @@
     </div>
 
     <div class="form-el">
-      <label for="speciality">Speciality:</label>
-      <input type="text" name="speciality" id="speciality"/>
-    </div>
+        <label for="speciality">Speciality:</label>
+        <select name="speciality" id="speciality">
+          <% @instructors.each do |instructor| %>
+              <option value=<%= instructor.id %>><%= instructor.speciality.capitalize %></option>
+          <% end %>
+        </select>
+      </div>
 
     <div class="form-el">
       <input type="submit" value="Add Instructor"/>
