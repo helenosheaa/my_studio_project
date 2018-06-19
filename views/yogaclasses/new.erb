@@ -25,7 +25,7 @@
       <label for="level">Select Level:</label>
       <select name="level" id="level">
           <% @yogaclasses.each do |yogaclass| %>
-              <option value=<%= yogaclass.level_id %>><%= yogaclass.level_id %></option>
+              <option value=<%= yogaclass.level_id %>><%= yogaclass.level.level.capitalize %></option>
           <% end %>
         </select>
     </div>

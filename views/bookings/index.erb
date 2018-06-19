@@ -4,7 +4,7 @@
   <% @bookings.each do |booking| %>
 
   <div class="booking">
-    <h3><a href="/bookings/<%= booking.id %>"><%= booking.id %></a></h3>
+    <h3><a href="/bookings/<%= booking.id %>">Booking: <%= booking.id %></a></h3>
     <p>Member: <%= booking.member.first_name %></p>
     <p>Yoga Class: <%= booking.yogaclass.name %></p>
   </div>
