@@ -30,9 +30,10 @@ end
 
 
 get '/yogaclasses/:id/edit' do
-  @instructors = Instructors.all()
+  @instructors = Instructor.all()
   @levels = Level.all()
   @yogaclass = YogaClass.find(params['id'].to_i)
+  @yogaclasses = YogaClass.all()
   erb(:"yogaclasses/edit")
 end
 

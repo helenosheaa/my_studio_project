@@ -15,8 +15,8 @@
     <div class="form-el">
         <label for="speciality">Speciality:</label>
         <select name="speciality" id="speciality">
-          <% for speciality in @specialities%>
-              <option value="<%= speciality.speciality_id %>"><%= speciality.speciality.capitalize %></option>
+          <% @instructors.each do |instructor|%>
+              <option value=<%= instructor.speciality_id %>><%= instructor.speciality.speciality.capitalize %></option>
           <% end %>
         </select>
     </div>
