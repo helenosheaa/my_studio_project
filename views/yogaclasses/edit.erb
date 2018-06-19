@@ -6,7 +6,7 @@
       <label for="name_select">Class:</label>
       <select name="name_id" id="select_name" >
           <% @yogaclasses.each do |yogaclass| %>
-          <%= if yogaclass.name == @yogaclass.name  %>
+          <% if yogaclass.name == @yogaclass.name  %>
               <option value="<%= yogaclass.name %>" selected = "selected"><%= yogaclass.name.capitalize%></option>
           <% else  %>
           <option value="<%= yogaclass.name %>"><%= yogaclass.name.capitalize%></option>
@@ -27,7 +27,7 @@
 
     <div class="form-el">
       <label for="level_select">Select Level:</label>
-      <select name="level_id" id="level_select" selected="<%= @yogaclass.level_id %>">
+      <select name="level_id" id="level_select">
           <% @levels.each do |level| %>
           <% if level.id == @yogaclass.level_id %>
               <option value="<%= level.id  %>"
