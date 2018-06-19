@@ -2,31 +2,65 @@ require_relative( "../models/booking.rb" )
 require_relative( "../models/instructor.rb" )
 require_relative( "../models/yogaclass.rb" )
 require_relative( "../models/member.rb" )
+require_relative( "../models/level.rb" )
+require_relative( "../models/speciality.rb" )
 require("pry-byebug")
 
 Booking.delete_all()
 Member.delete_all()
 YogaClass.delete_all()
 Instructor.delete_all()
+Speciality.delete_all()
+Level.delete_all()
+
+level1 = Level.new({
+  "level" => "Beginner"
+})
+level1.save()
+
+level2 = Level.new({
+  "level" => "Intermediate"
+})
+level2.save()
+
+level3 = Level.new({
+  "level" => "Advanced"
+})
+level3.save()
+
+speciality1 = Speciality.new({
+  "speciality" => "Ashtanga"
+})
+speciality1.save()
+
+speciality2 = Speciality.new({
+  "speciality" => "Yin"
+})
+speciality2.save()
+
+speciality3 = Speciality.new({
+  "speciality" => "Power Flow"
+})
+speciality3.save()
 
 instructor1 = Instructor.new({
   "first_name" => "Stacy",
   "last_name" => "Hardy",
-  "speciality" => "Ashtanga"
+  "speciality_id" => speciality1.id
 })
 instructor1.save()
 
 instructor2 = Instructor.new({
   "first_name" => "Amanda",
   "last_name" => "Coates",
-  "speciality" => "Yin"
+  "speciality_id" => speciality2.id
 })
 instructor2.save()
 
 instructor3 = Instructor.new({
   "first_name" => "Cat",
   "last_name" => "Johnstone",
-  "speciality" => "Power"
+  "speciality_id" => speciality3.id
 })
 instructor3.save()
 
@@ -34,7 +68,7 @@ yogaclass1 = YogaClass.new({
   "name" => "Fully-led Ashtanga",
   "time" => "09:00",
   "duration" => "1.5 Hours",
-  "level" => "Advanced",
+  "level_id" => level3.id,
   "instructor_id" => instructor1.id
 })
 yogaclass1.save()
@@ -43,7 +77,7 @@ yogaclass2 = YogaClass.new({
   "name" => "Yin Yoga",
   "time" => "17:00",
   "duration" => "1 Hour",
-  "level" => "Intermediate",
+  "level_id" => level2.id,
   "instructor_id" => instructor2.id
 })
 yogaclass2.save()
@@ -52,7 +86,7 @@ yogaclass3 = YogaClass.new({
   "name" => "Power Flow",
   "time" => "12:00",
   "duration" => "1 Hour",
-  "level" => "Beginner",
+  "level_id" => level1.id,
   "instructor_id" => instructor3.id
 })
 yogaclass3.save()
@@ -60,21 +94,21 @@ yogaclass3.save()
 member1 = Member.new({
   "first_name" => "Michelle",
   "last_name" => "Brown",
-  "level" => "Beginner"
+  "level_id" => level1.id
 })
 member1.save()
 
 member2 = Member.new({
   "first_name" => "John",
   "last_name" => "Dimaro",
-  "level" => "Intermediate"
+  "level_id" => level2.id
 })
 member2.save()
 
 member3 = Member.new({
   "first_name" => "Christine",
   "last_name" => "Clapham",
-  "level" => "Advanced"
+  "level_id" => level3.id
 })
 member3.save()
 

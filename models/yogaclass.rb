@@ -2,14 +2,14 @@ require_relative( '../db/sql_runner' )
 
 class YogaClass
 
-  attr_reader( :name, :time, :duration, :level, :instructor_id, :id)
+  attr_reader( :name, :time, :duration, :level_id, :instructor_id, :id)
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @time = options['time']
     @duration = options['duration']
-    @level = options['level']
+    @level_id = options['level_id']
     @instructor_id = options['instructor_id'].to_i
   end
 
@@ -19,7 +19,7 @@ class YogaClass
       name,
       time,
       duration,
-      level,
+      level_id,
       instructor_id
     )
     VALUES
@@ -27,7 +27,7 @@ class YogaClass
       $1, $2, $3, $4, $5
     )
     RETURNING id"
-    values = [@name, @time, @duration, @level, @instructor_id]
+    values = [@name, @time, @duration, @level_id, @instructor_id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -60,14 +60,14 @@ class YogaClass
     name,
     time,
     duration,
-    level,
+    level_id,
     instructor_id
   ) =
   (
     $1, $2, $3, $4, $5
   )
   WHERE id = $6"
-  values = [@name, @time, @duration, @level, @instructor_id, @id]
+  values = [@name, @time, @duration, @level_id, @instructor_id, @id]
   SqlRunner.run(sql, values)
 end
 
