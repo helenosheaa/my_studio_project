@@ -29,14 +29,15 @@ end
 
 get '/bookings/:id/edit' do
   @members = Member.all
-  @yogaclass = YogaClass.find(params['id'].to_i)
+  @yogaclasses = YogaClass.all
+  @booking = Booking.find(params['id'])
   erb(:"bookings/edit")
 end
 
 post '/bookings/:id' do
   booking = Booking.new(params)
   booking.update()
-  redirect to ("/bookings/#{params['id']}")
+  redirect to ("/bookings")
 end
 
 post '/bookings/:id/delete' do

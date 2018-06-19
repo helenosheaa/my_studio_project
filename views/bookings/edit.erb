@@ -6,7 +6,7 @@
     <label for="member_select">Select Member:</label>
     <select name="member_id" id="member_select" selected="<%= @booking.member_id  %>">
       <% @members.each do |member| %>
-        <% if member.id == booking.member_id %>
+        <% if member.id == @booking.member_id %>
           <option value=<%= member.id %> selected><%= member.first_name.capitalize %></option>
         <% else %>
           <option value=<%= member.id %>><%= member.first_name.capitalize %></option>
