@@ -30,6 +30,15 @@ class Speciality
     return results.map { |speciality| Speciality.new( speciality ) }
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM specialities
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql ,values).first
+    speciality = Speciality.new(result)
+    return speciality
+  end
+
   def self.delete_all()
     sql = "DELETE FROM specialities"
     SqlRunner.run( sql )

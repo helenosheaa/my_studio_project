@@ -51,6 +51,12 @@ class Instructor
   SqlRunner.run(sql, values)
 end
 
+def speciality()
+    speciality = Speciality.find(@speciality_id)
+    return speciality
+  end
+
+
   def self.all()
     sql = "SELECT * FROM instructors"
     results = SqlRunner.run( sql )

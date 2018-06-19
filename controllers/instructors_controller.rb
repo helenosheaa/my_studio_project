@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/instructor.rb' )
+require_relative( '../models/speciality.rb' )
 also_reload( '../models/*' )
 
 get '/instructors' do
@@ -32,7 +33,7 @@ end
 post '/instructors/:id' do
   instructor = Instructor.new(params)
   instructor.update
-  redirect to ("/instructors/#{params['id']}")
+  redirect to ("/instructors")
 end
 
 post '/instructors/:id/delete' do

@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/member.rb' )
+require_relative( '../models/level.rb' )
 also_reload( '../models/*' )
 
 get '/members' do

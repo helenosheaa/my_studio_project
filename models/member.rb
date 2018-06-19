@@ -58,6 +58,11 @@ class Member
   SqlRunner.run(sql, values)
 end
 
+def level()
+    level = Level.find(@level_id)
+    return level
+  end
+
   def self.delete_all()
     sql = "DELETE FROM members"
     SqlRunner.run( sql )

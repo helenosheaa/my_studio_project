@@ -30,6 +30,15 @@ class Level
     return results.map { |level| Level.new( level ) }
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM levels
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql ,values).first
+    level = Level.new(result)
+    return level
+  end
+
   def self.delete_all()
     sql = "DELETE FROM levels"
     SqlRunner.run( sql )

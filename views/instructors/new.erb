@@ -13,8 +13,8 @@
     </div>
 
     <div class="form-el">
-        <label for="speciality">Speciality:</label>
-        <select name="speciality" id="speciality">
+        <label for="speciality_select">Speciality:</label>
+        <select name="speciality_id" id="speciality_select">
           <% @instructors.each do |instructor| %>
               <option value=<%= instructor.speciality_id %>><%= instructor.speciality_id.capitalize %></option>
           <% end %>

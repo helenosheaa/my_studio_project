@@ -71,6 +71,11 @@ class YogaClass
   SqlRunner.run(sql, values)
 end
 
+  def level()
+    level = Level.find(@level_id)
+    return level
+  end
+
   def self.all()
     sql = "SELECT * FROM yogaclasses"
     results = SqlRunner.run( sql )

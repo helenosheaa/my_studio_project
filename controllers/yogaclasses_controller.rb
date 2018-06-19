@@ -3,6 +3,7 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/yogaclass.rb' )
 require_relative( '../models/instructor.rb' )
 require_relative( '../models/member.rb' )
+require_relative( '../models/level.rb' )
 also_reload( '../models/*' )
 
 get '/yogaclasses' do

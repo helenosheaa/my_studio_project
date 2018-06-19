@@ -1,4 +1,4 @@
-<h2>Edit Instructor</h2> <%= @instructor.first_name  %></h2>
+<h2>Edit Instructor</h2> <%= @instructor.id  %></h2>
 <form method="POST" action="/instructors/<%= @instructor.id  %>">
   <div class="form-wrapper">
 
@@ -14,12 +14,12 @@
 
     <div class="form-el">
         <label for="speciality_select">Speciality:</label>
-        <select name="speciality" id="speciality_select" selected= "<%= @instructor.speciality_id %>">
-          <% @levels.each do |instructor| %>
-          <%= if instructor.speciality_id == @instructor.speciality_id %>
-              <option value=<%= instructor.speciality %> selected><%= instructor.speciality_id.capitalize %></option>
+        <select name="speciality_id" id="speciality_select" selected= "<%= @instructor.speciality_id %>">
+          <% @specialities.each do |speciality| %>
+          <% if speciality.id == @instructor.speciality_id %>
+              <option value=<%= speciality.id %> selected><%= speciality.speciality.capitalize %></option>
               <% else  %>
-              <option value=<%= instructor.speciality_id %><%= instructor.speciality_id.capitalize %></option>
+              <option value=<%= speciality.id %><%= speciality.speciality.capitalize %></option>
               <% end %>
           <% end %>
         </select>
