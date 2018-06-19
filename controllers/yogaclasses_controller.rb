@@ -23,6 +23,12 @@ post '/yogaclasses' do
   redirect to ( "/yogaclasses" )
 end
 
+get '/yogaclasses/:id/members' do
+  yogaclass = YogaClass.find(params['id'])
+  @members = yogaclass.members()
+  erb(:"yogaclasses/members")
+end
+
 get '/yogaclasses/:id' do
   @yogaclass = YogaClass.find(params['id'].to_i)
   erb( :"yogaclasses/show" )

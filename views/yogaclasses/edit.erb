@@ -5,14 +5,14 @@
     <div class="form-el">
       <label for="name_select">Class:</label>
       <select name="name_id" id="select_name" >
-        <% @yogaclasses.each do |yogaclass| %>
-          <% if yogaclass.name == @yogaclass.name  %>
+          <% @yogaclasses.each do |yogaclass| %>
+          <%= if yogaclass.name == @yogaclass.name  %>
               <option value="<%= yogaclass.name %>" selected = "selected"><%= yogaclass.name.capitalize%></option>
-          <% else %>
+          <% else  %>
           <option value="<%= yogaclass.name %>"><%= yogaclass.name.capitalize%></option>
           <% end %>
-        <% end %>
-      </select>
+          <% end %>
+        </select>
     </div>
 
     <div class="form-el">
