@@ -14,12 +14,12 @@
 
     <div class="form-el">
         <label for="speciality_select">Speciality:</label>
-        <select name="speciality" id="speciality_select" selected= "<%= @instructor.speciality %>">
-          <% @instructors.each do |instructor| %>
-          <%= if instructor.speciality == @instructor.speciality %>
-              <option value=<%= instructor.speciality %> selected><%= instructor.speciality.capitalize %></option>
+        <select name="speciality" id="speciality_select" selected= "<%= @instructor.speciality_id %>">
+          <% @levels.each do |instructor| %>
+          <%= if instructor.speciality_id == @instructor.speciality_id %>
+              <option value=<%= instructor.speciality %> selected><%= instructor.speciality_id.capitalize %></option>
               <% else  %>
-              <option value=<%= instructor.speciality %><%= instructor.speciality.capitalize %></option>
+              <option value=<%= instructor.speciality_id %><%= instructor.speciality_id.capitalize %></option>
               <% end %>
           <% end %>
         </select>

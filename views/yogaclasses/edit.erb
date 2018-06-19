@@ -24,12 +24,12 @@
     </div>
 
     <div class="form-el">
-      <label for="level">Select Level:</label>
-      <select name="level" id="level" selected="<%= @yogaclass.level %>">
+      <label for="level_id">Select Level:</label>
+      <select name="level" id="level" selected="<%= @yogaclass.level_id %>">
           <% @yogaclasses.each do |yogaclass| %>
-              <option value=<%= yogaclass.level %>selected><%= yogaclass.level.capitalize %></option>
+              <option value=<%= yogaclass.level_id %>selected><%= yogaclass.level_id.capitalize %></option>
               <% else  %>
-              <option value=<%= yogaclass.level %>><%= yogaclass.level.capitalize %></option>
+              <option value=<%= yogaclass.level_id %>><%= yogaclass.level_id.capitalize %></option>
           <% end %>
           <% end %>
         </select>

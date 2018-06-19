@@ -5,7 +5,7 @@
 
   <div class="member">
     <h3><a href="/members/<%= member.id %>"><%= member.first_name.capitalize %></a></h3>
-    <p>Level: <%= member.level.capitalize %></p>
+    <p>Level: <%= member.level_id.capitalize %></p>
   </div>
   <a href="/members/<%= member.id %>/edit">Edit Member</a>
   <form action="/members/<%= member.id %>/delete" method="POST">
