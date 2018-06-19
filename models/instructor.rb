@@ -8,7 +8,7 @@ class Instructor
     @id = options['id'].to_i if options['id']
     @first_name = options['first_name']
     @last_name = options['last_name']
-    @speciality_id = options['speciality_id']
+    @speciality_id = options['speciality_id'].to_i
   end
 
   def save()

@@ -1,5 +1,6 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
+require('pry')
 require_relative( '../models/yogaclass.rb' )
 require_relative( '../models/instructor.rb' )
 require_relative( '../models/member.rb' )

@@ -4,7 +4,7 @@
 
     <div class="form-el">
       <label for="name">Class:</label>
-      <select name="name" id="name" >
+      <select name="name" id="name_id" >
           <% @yogaclasses.each do |yogaclass| %>
           <% if yogaclass.name == @yogaclass.name  %>
               <option value="<%= yogaclass.name %>" selected = "selected"><%= yogaclass.name.capitalize%></option>
@@ -16,7 +16,7 @@
     </div>
 
     <div class="form-el">
-      <label for="time">Time:</label>
+      <label for="start_time">Time:</label>
       <input type="datetime-local" name="start_time" id="datetime" value="<%= @yogaclass.start_time  %>"/>
     </div>
 
@@ -30,8 +30,7 @@
       <select name="level_id" id="level_select">
           <% @levels.each do |level| %>
           <% if level.id == @yogaclass.level_id %>
-              <option value="<%= level.id  %>"
-                selected = "selected"><%= level.level.capitalize %></option>
+              <option value="<%= level.id  %>" selected="selected"><%= level.level.capitalize %></option>
               <% else  %>
               <option value="<%= level.id %>"><%= level.level.capitalize %></option>
           <% end %>

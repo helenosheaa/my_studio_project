@@ -9,7 +9,7 @@ class YogaClass
     @name = options['name']
     @start_time = options['start_time']
     @duration = options['duration']
-    @level_id = options['level_id']
+    @level_id = options['level_id'].to_i
     @instructor_id = options['instructor_id'].to_i
   end
 
