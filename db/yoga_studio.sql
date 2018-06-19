@@ -22,7 +22,7 @@ CREATE TABLE instructors
   id SERIAL8 primary key,
   first_name VARCHAR(255),
   last_name VARCHAR(255),
-  speciality_id INT8 REFERENCES specialities(id)
+  speciality_id INT8 REFERENCES specialities(id) ON DELETE CASCADE
 );
 
 CREATE TABLE yogaclasses
@@ -31,8 +31,8 @@ CREATE TABLE yogaclasses
   name VARCHAR(255),
   start_time TIMESTAMP,
   duration VARCHAR(255),
-  level_id INT8 REFERENCES levels(id),
-  instructor_id INT8 REFERENCES instructors(id)
+  level_id INT8 REFERENCES levels(id) ON DELETE CASCADE,
+  instructor_id INT8 REFERENCES instructors(id) ON DELETE CASCADE
 );
 
 CREATE TABLE members
@@ -40,12 +40,12 @@ CREATE TABLE members
   id SERIAL8 primary key,
   first_name VARCHAR(255),
   last_name VARCHAR(255),
-  level_id INT8 REFERENCES levels(id)
+  level_id INT8 REFERENCES levels(id) ON DELETE CASCADE
 );
 
 CREATE TABLE bookings
 (
   id SERIAL8 PRIMARY KEY,
-  member_id INT8 REFERENCES members(id),
-  yogaclass_id INT8 REFERENCES yogaclasses(id)
+  member_id INT8 REFERENCES members(id) ON DELETE CASCADE,
+  yogaclass_id INT8 REFERENCES yogaclasses(id) ON DELETE CASCADE
 );
