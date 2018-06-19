@@ -2,7 +2,7 @@ require_relative( '../db/sql_runner' )
 
 class Level
 
-  attr_reader( :level, :id )
+  attr_accessor( :level, :id )
 
   def initialize( options )
     @id = options['id'].to_i if options['id']

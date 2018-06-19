@@ -7,7 +7,7 @@ class TestYogaClass < MiniTest::Test
     options ={
         "id" => 1,
         "name" => "Power Flow",
-        "time" => "12:00",
+        "start_time" => "2018-01-01 12:00",
         "duration" => "1 Hour",
         "level" => "Beginner",
         "instructor_id" => 3
@@ -20,7 +20,7 @@ class TestYogaClass < MiniTest::Test
   end
 
   def test_time()
-    assert_equal("12:00", @yogaclass.time())
+    assert_equal("2018-01-01 12:00", @yogaclass.start_time())
   end
 
   def test_duration()

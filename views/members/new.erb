@@ -14,7 +14,7 @@
 
     <div class="form-el">
         <label for="level">Level:</label>
-        <select name="level" id="level">
+        <select name="level_id" id="level">
           <% @members.each do |member| %>
               <option value=<%= member.level_id %>><%= member.level.level.capitalize %></option>
           <% end %>

@@ -29,7 +29,7 @@ CREATE TABLE yogaclasses
 (
   id SERIAL8 primary key,
   name VARCHAR(255),
-  time VARCHAR(255),
+  start_time TIMESTAMP,
   duration VARCHAR(255),
   level_id INT8 REFERENCES levels(id),
   instructor_id INT8 REFERENCES instructors(id)

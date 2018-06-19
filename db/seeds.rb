@@ -66,7 +66,7 @@ instructor3.save()
 
 yogaclass1 = YogaClass.new({
   "name" => "Fully-led Ashtanga",
-  "time" => "09:00",
+  "start_time" => "2018-01-01 09:00",
   "duration" => "1.5 Hours",
   "level_id" => level3.id,
   "instructor_id" => instructor1.id
@@ -75,7 +75,7 @@ yogaclass1.save()
 
 yogaclass2 = YogaClass.new({
   "name" => "Yin Yoga",
-  "time" => "17:00",
+  "start_time" => "2018-01-01 17:00",
   "duration" => "1 Hour",
   "level_id" => level2.id,
   "instructor_id" => instructor2.id
@@ -84,7 +84,7 @@ yogaclass2.save()
 
 yogaclass3 = YogaClass.new({
   "name" => "Power Flow",
-  "time" => "12:00",
+  "start_time" => "2018-01-01 12:00",
   "duration" => "1 Hour",
   "level_id" => level1.id,
   "instructor_id" => instructor3.id
