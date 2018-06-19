@@ -7,7 +7,7 @@
     <h3><a href="/yogaclasses/<%= yogaclass.id %>"><%= yogaclass.name %></a></h3>
     <p>Time: <%= yogaclass.time %></p>
     <p>Duration: <%= yogaclass.duration %></p>
-    <p>Level: <%= yogaclass.level_id %></p>
+    <p>Level: <%= yogaclass.level.level.capitalize %></p>
     <p>Instructor: <%=yogaclass.instructor.first_name%></p>
   </div>
   <a href="/yogaclasses/<%= yogaclass.id %>/edit">Edit Yoga Class</a>
