@@ -13,6 +13,7 @@ end
 
 get '/yogaclasses/new' do
   @instructors = Instructor.all()
+  @levels = Level.all()
   @yogaclasses = YogaClass.all()
   erb( :"yogaclasses/new" )
 end
@@ -29,6 +30,8 @@ end
 
 
 get '/yogaclasses/:id/edit' do
+  @instructors = Instructors.all()
+  @levels = Level.all()
   @yogaclass = YogaClass.find(params['id'].to_i)
   erb(:"yogaclasses/edit")
 end
@@ -36,7 +39,7 @@ end
 post '/yogaclasses/:id' do
   yogaclass = YogaClass.new(params)
   yogaclass.update
-  redirect to ("/yogaclasses/#{params['id']}")
+  redirect to ("/yogaclasses")
 end
 
 post '/yogaclasses/:id/delete' do

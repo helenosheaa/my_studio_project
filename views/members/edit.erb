@@ -1,5 +1,5 @@
 <h2>Edit Member <%= @member.first_name  %></h2>
-<form method="POST" action="/members/">
+<form method="POST" action="/members/<%= @member.id  %>">
   <div class="form-wrapper">
 
     <div class="form-el">
@@ -12,18 +12,18 @@
       <input type="text" name="last_name" id="last_name" value="<%= @member.last_name  %>"/>
     </div>
 
-    <!-- <div class="form-el">
-        <label for="level">Level:</label>
-        <select name="level" id="level" selected="<%= @member.level  %>">
-          <% @members.each do |member| %>
-          <% if member.level == @member.level  %>
-              <option value=<%= member.level %>selected><%= member.level.capitalize %></option>
+    <div class="form-el">
+        <label for="level_select">Level:</label>
+        <select name="level_id" id="level_select">
+          <% @levels.each do |level| %>
+          <% if level.id == @member.level_id  %>
+              <option value="<%= level.id %>" "selected"><%= level.level.capitalize %></option>
               <% else  %>
-              <option value=<%= member.level %>> <%= member.level.capitalize %></option>
+              <option value="<%= level.id %>"> <%= level.level.capitalize %></option>
           <% end %>
           <% end %>
         </select>
-      </div> -->
+      </div>
 
     <div class="form-el">
       <input type="submit" value="Edit Member"/>
