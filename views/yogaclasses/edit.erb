@@ -3,8 +3,8 @@
   <div class="form-wrapper">
 
     <div class="form-el">
-      <label for="name_select">Class:</label>
-      <select name="name_id" id="select_name" >
+      <label for="name">Class:</label>
+      <select name="name" id="name" >
           <% @yogaclasses.each do |yogaclass| %>
           <% if yogaclass.name == @yogaclass.name  %>
               <option value="<%= yogaclass.name %>" selected = "selected"><%= yogaclass.name.capitalize%></option>
@@ -17,7 +17,7 @@
 
     <div class="form-el">
       <label for="time">Time:</label>
-      <input type="datetime-local" name="time" id="datetime" value="<%= @yogaclass.start_time  %>"/>
+      <input type="datetime-local" name="start_time" id="datetime" value="<%= @yogaclass.start_time  %>"/>
     </div>
 
     <div class="form-el">
