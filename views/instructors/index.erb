@@ -9,7 +9,7 @@
   </tr>
   <%for instructor in @instructors %>
   <tr>
-    <td><a href="/instructors/<%= instructor.id  %>"><%= instructor.first_name.capitalize  %></td>
+    <td><a href="/instructors/<%= instructor.id  %>"><%= instructor.full_name %></td>
     <td>|</td>
     <td><%= instructor.speciality.speciality.capitalize  %></td>
     <td>|</td>

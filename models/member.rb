@@ -63,6 +63,10 @@ def level()
     return level
   end
 
+  def full_name
+  return "#{@first_name.capitalize} #{@last_name.capitalize}"
+  end
+
   def self.delete_all()
     sql = "DELETE FROM members"
     SqlRunner.run( sql )

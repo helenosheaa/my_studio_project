@@ -56,6 +56,10 @@ def speciality()
     return speciality
   end
 
+  def full_name
+  return "#{@first_name.capitalize} #{@last_name.capitalize}"
+  end
+
 
   def self.all()
     sql = "SELECT * FROM instructors"

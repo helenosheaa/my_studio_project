@@ -11,9 +11,9 @@
   </div>
   <%for booking in @bookings %>
   <tr>
-    <td><a href="/bookings/<%= booking.id  %>"><%= booking.member.first_name  %></td>
+    <td><a href="/bookings/<%= booking.id  %>"><%= booking.member.full_name  %></td>
     <td>|</td>
-    <td><%= booking.yogaclass.name  %></td>
+    <td><%= booking.yogaclass.name.capitalize  %></td>
     <td>|</td>
     <td><a href="/bookings/<%= booking.id %>/edit">Edit Booking</a></td>
   </tr>

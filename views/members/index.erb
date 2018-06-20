@@ -9,7 +9,7 @@
   </tr>
   <%for member in @members %>
   <tr>
-    <td> <a href="/members/<%= member.id  %>"><%= member.first_name.capitalize  %></td>
+    <td> <a href="/members/<%= member.id  %>"><%= member.full_name  %></td>
     <td>|</td>
     <td><%= member.level.level.capitalize  %></td>
     <td>|</td>

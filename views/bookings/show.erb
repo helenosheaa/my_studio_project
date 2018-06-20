@@ -4,8 +4,8 @@
   <% @bookings.each do |booking| %>
 
   <div class="booking">
-    <p>Member: <%= booking.member.first_name %></p>
-    <p>Yoga Class: <%= booking.yogaclass.name %></p>
+    <p>Member: <%= booking.member.full_name %></p>
+    <p>Yoga Class: <%= booking.yogaclass.name.capitalize %></p>
     <form action="/bookings/<%= booking.id %>/delete" method="POST">
     <input type="submit" value="Delete Booking"/></form>
   </div>
