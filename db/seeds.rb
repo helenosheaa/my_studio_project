@@ -14,42 +14,52 @@ Speciality.delete_all()
 Level.delete_all()
 
 level1 = Level.new({
-  "level" => "Beginner"
+  "level_type" => "Beginner"
 })
 level1.save()
 
 level2 = Level.new({
-  "level" => "Intermediate"
+  "level_type" => "Intermediate"
 })
 level2.save()
 
 level3 = Level.new({
-  "level" => "Advanced"
+  "level_type" => "Advanced"
 })
 level3.save()
 
+level4 = Level.new({
+  "level_type" => "Mysore"
+})
+level4.save()
+
+level5 = Level.new({
+  "level_type" => "Full led"
+})
+level5.save()
+
 speciality1 = Speciality.new({
-  "speciality" => "Ashtanga"
+  "speciality_type" => "Restorative"
 })
 speciality1.save()
 
 speciality2 = Speciality.new({
-  "speciality" => "Yin"
+  "speciality_type" => "Yin"
 })
 speciality2.save()
 
 speciality3 = Speciality.new({
-  "speciality" => "Power Flow"
+  "speciality_type" => "Power Flow"
 })
 speciality3.save()
 
 speciality4 = Speciality.new({
-  "speciality" => "Vinyasa Flow"
+  "speciality_type" => "Ashtanga"
 })
 speciality4.save()
 
 speciality5 = Speciality.new({
-  "speciality" => "Restorative"
+  "speciality_type" => "Vinyasa Flow"
 })
 speciality5.save()
 
@@ -89,11 +99,11 @@ instructor5 = Instructor.new({
 instructor5.save()
 
 yogaclass1 = YogaClass.new({
-  "name" => "Fully-led Ashtanga",
+  "name" => "Restorative Yoga",
   "start_time" => "2018-01-01 09:00",
   "duration" => "1 Hour 30 Minutes",
   "capacity" => 20,
-  "level_id" => level3.id,
+  "level_id" => level1.id,
   "instructor_id" => instructor1.id
 })
 yogaclass1.save()
@@ -119,21 +129,21 @@ yogaclass3 = YogaClass.new({
 yogaclass3.save()
 
 yogaclass4 = YogaClass.new({
-  "name" => "Vinyasa Flow",
+  "name" => "Mysore Ashtanga",
   "start_time" => "2018-01-01 12:00",
   "duration" => "1 Hour",
   "capacity" => 20,
-  "level_id" => level2.id,
+  "level_id" => level4.id,
   "instructor_id" => instructor4.id
 })
 yogaclass4.save()
 
 yogaclass5 = YogaClass.new({
-  "name" => "Restorative",
+  "name" => "Full Led Ashtanga",
   "start_time" => "2018-01-01 20:00",
   "duration" => "1 Hour 15 Minutes",
   "capacity" => 20,
-  "level_id" => level1.id,
+  "level_id" => level5.id,
   "instructor_id" => instructor5.id
 })
 yogaclass5.save()
@@ -159,20 +169,6 @@ member3 = Member.new({
 })
 member3.save()
 
-member4 = Member.new({
-  "first_name" => "Kerry",
-  "last_name" => "Segel",
-  "level_id" => level3.id
-})
-member4.save()
-
-member5 = Member.new({
-  "first_name" => "Jane",
-  "last_name" => "Jeffries",
-  "level_id" => level3.id
-})
-member5.save()
-
 booking1 = Booking.new({
   "member_id" => member1.id,
   "yogaclass_id" => yogaclass1.id
@@ -192,16 +188,16 @@ booking3 = Booking.new({
 booking3.save()
 
 booking4 = Booking.new({
-  "member_id" => member4.id,
+  "member_id" => member3.id,
   "yogaclass_id" => yogaclass4.id
 })
 booking4.save()
 
 booking5 = Booking.new({
-  "member_id" => member5.id,
+  "member_id" => member2.id,
   "yogaclass_id" => yogaclass5.id
 })
-booking3.save()
+booking5.save()
 
 
 binding.pry

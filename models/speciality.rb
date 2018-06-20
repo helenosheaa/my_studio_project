@@ -2,24 +2,24 @@ require_relative( '../db/sql_runner' )
 
 class Speciality
 
-  attr_accessor( :speciality, :id )
+  attr_accessor( :speciality_type, :id )
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
-    @speciality = options['speciality']
+    @speciality_type = options['speciality_type']
   end
 
   def save()
     sql = "INSERT INTO specialities
     (
-      speciality
+      speciality_type
     )
     VALUES
     (
       $1
     )
     RETURNING id"
-    values = [@speciality]
+    values = [@speciality_type]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end

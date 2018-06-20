@@ -8,13 +8,13 @@ DROP TABLE levels;
 
 CREATE TABLE levels (
   id SERIAL8 primary key,
-  level VARCHAR(255)
+  level_type VARCHAR(255)
 );
 
 CREATE TABLE specialities
  (
   id SERIAL8 primary key,
-  speciality VARCHAR(255)
+  speciality_type VARCHAR(255)
 );
 
 CREATE TABLE instructors

@@ -2,24 +2,24 @@ require_relative( '../db/sql_runner' )
 
 class Level
 
-  attr_accessor( :level, :id )
+  attr_accessor( :level_type, :id )
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
-    @level = options['level']
+    @level_type = options['level_type']
   end
 
   def save()
     sql = "INSERT INTO levels
     (
-      level
+      level_type
     )
     VALUES
     (
       $1
     )
     RETURNING id"
-    values = [@level]
+    values = [@level_type]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end

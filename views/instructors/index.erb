@@ -5,13 +5,13 @@
     <th></th>
     <th>Speciality:</th>
     <th></th>
-    <th>Instructor:</th>
+    <th>Update Instructor:</th>
   </tr>
   <%for instructor in @instructors %>
   <tr>
     <td><a href="/instructors/<%= instructor.id  %>"><%= instructor.full_name %></td>
     <td>|</td>
-    <td><%= instructor.speciality.speciality.capitalize  %></td>
+    <td><%= instructor.speciality.speciality_type.capitalize  %></td>
     <td>|</td>
     <td><a href="/instructors/<%= instructor.id %>/edit">Edit Instructor</a></td>
   </tr>

@@ -17,7 +17,7 @@
         <select name="speciality_id" id="speciality">
           <% @instructors.each do |instructor|%>
 
-              <option value=<%= instructor.speciality_id %>><%= instructor.speciality.speciality.capitalize %></option>
+              <option value=<%= instructor.speciality_id %>><%= instructor.speciality.speciality_type.capitalize %></option>
           <% end %>
         </select>
     </div>
