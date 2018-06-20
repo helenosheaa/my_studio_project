@@ -79,6 +79,19 @@ end
     return level
   end
 
+  def number_of_participants()
+    return members().count
+  end
+
+  def is_full?
+    return (@capacity <= 0)
+  end
+
+  def add_participant()
+    @capacity -= 1
+    update()
+  end
+
   def self.all()
     sql = "SELECT * FROM yogaclasses"
     results = SqlRunner.run( sql )

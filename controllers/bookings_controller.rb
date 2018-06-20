@@ -18,8 +18,14 @@ get '/bookings/new' do
 end
 
 post '/bookings' do
-  Booking.new(params).save
-  redirect to ( "/bookings" )
+  yogaclass = YogaClass.find(params['yogaclass_id'])
+  if !yogaclass.is_full?
+    yogaclass.add_participant()
+    Booking.new(params).save
+    redirect to ( "/bookings" )
+  else
+    redirect to ("/bookings/error")
+  end
 end
 
 get '/bookings/:id' do
