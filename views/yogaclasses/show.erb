@@ -1,9 +1,18 @@
-<h2><%= @yogaclass.name %></h2>
+<h4>Yoga Class</h4>
 
-<p>Time: <%= @yogaclass.start_time %></p>
+<div id="yogaclass-wrapper">
+  <% @yogaclasses.each do |yogaclass| %>
 
-<p>Duration: <%= @yogaclass.duration %></p>
-
-<p>Level: <%= @yogaclass.level.level %></p>
-
-<p>Instructor: <%= @yogaclass.instructor.first_name %></p>
+  <div class="yogaclass">
+    <h3><a href="/yogaclasses/<%= yogaclass.id %>"><%= yogaclass.name %></a></h3>
+    <p>Time: <%= yogaclass.start_time %></p>
+    <p>Duration: <%= yogaclass.duration %></p>
+    <p>Level: <%= yogaclass.level.level.capitalize %></p>
+    <p>Instructor: <%=yogaclass.instructor.first_name%></p>
+  </div>
+  <a href="/yogaclasses/<%= yogaclass.id %>/edit">Edit Yoga Class</a>
+  <form action="/yogaclasses/<%= yogaclass.id %>/delete" method="POST">
+  <input type="submit" value="Delete Class"/></form>
+  <a href="/yogaclasses/<%= yogaclass.id %>/members"> See Attendees </a>
+  <% end %>
+</div>

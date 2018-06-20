@@ -1,3 +1,15 @@
-<p>Name: <%= @booking.member.first_name %></p>
+<h4>Bookings</h4>
 
-<p>Class: <%= @booking.yogaclass.name %></p>
+<div id="booking-wrapper">
+  <% @bookings.each do |booking| %>
+
+  <div class="booking">
+    <h3><a href="/bookings/<%= booking.id %>">Booking: <%= booking.id %></a></h3>
+    <p>Member: <%= booking.member.first_name %></p>
+    <p>Yoga Class: <%= booking.yogaclass.name %></p>
+  </div>
+  <a href="/bookings/<%= booking.id %>/edit">Edit Booking</a>
+  <form action="/bookings/<%= booking.id %>/delete" method="POST">
+  <input type="submit" value="Delete Booking"/></form>
+  <% end %>
+</div>

@@ -21,6 +21,7 @@ end
 
 get '/instructors/:id' do
   @instructor = Instructor.find(params['id'].to_i)
+  @instructors = Instructor.all()
   erb( :"instructors/show" )
 end
 

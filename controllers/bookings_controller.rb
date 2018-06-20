@@ -24,6 +24,7 @@ end
 
 get '/bookings/:id' do
   @booking = Booking.find(params['id'].to_i)
+  @bookings = Booking.all()
   erb( :"bookings/show" )
 end
 

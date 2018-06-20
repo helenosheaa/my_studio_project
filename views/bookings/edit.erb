@@ -3,7 +3,7 @@
   <div class="form-wrapper">
 
       <div class="form-el">
-    <label for="member_select">Select Member:</label>
+    <label for="member_select">Member:</label>
     <select name="member_id" id="member_select" selected="<%= @booking.member_id  %>">
       <% @members.each do |member| %>
         <% if member.id == @booking.member_id %>
@@ -16,7 +16,7 @@
   </div>
 
     <div class="form-el">
-        <label for="yogaclass_select">Select Yoga Class:</label>
+        <label for="yogaclass_select">Yoga Class:</label>
         <select name="yogaclass_id" id="yogaclass_select" selected="<%= @booking.yogaclass_id  %>">
           <% @yogaclasses.each do |yogaclass| %>
           <% if yogaclass.id == @booking.yogaclass_id  %>

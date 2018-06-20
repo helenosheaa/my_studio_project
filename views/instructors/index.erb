@@ -1,14 +1,18 @@
-<h4>Instructors</h4>
-
-<div id="instructor-wrapper">
-  <% @instructors.each do |instructor| %>
-
-  <div class="instructor">
-    <h3><a href="/instructors/<%= instructor.id %>"><%= instructor.first_name.capitalize %></a></h3>
-    <p>Speciality: <%= instructor.speciality.speciality.capitalize %></p>
-  </div>
-  <a href="/instructors/<%= instructor.id %>/edit">Edit Instructor</a>
-  <form action="/instructors/<%= instructor.id %>/delete" method="POST">
-  <input type="submit" value="Delete Instructor"></form>
+<table>
+  <tr>
+    <th>ID:</th>
+    <th></th>
+    <th>Instructor Name:</th>
+    <th></th>
+    <th>Speciality:</th>
+  </tr>
+  <%for instructor in @instructors %>
+  <tr>
+    <td> <a href="/instructors/<%= instructor.id  %>"><%= instructor.id  %></a> </td>
+    <td>|</td>
+    <td><%= instructor.first_name.capitalize  %></td>
+    <td>|</td>
+    <td><%= instructor.speciality.speciality.capitalize  %></td>
+  </tr>
   <% end %>
-</div>
+</table>

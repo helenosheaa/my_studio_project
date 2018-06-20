@@ -31,6 +31,7 @@ get '/yogaclasses/:id/members' do
 end
 
 get '/yogaclasses/:id' do
+  @yogaclasses = YogaClass.all()
   @yogaclass = YogaClass.find(params['id'].to_i)
   erb( :"yogaclasses/show" )
 end

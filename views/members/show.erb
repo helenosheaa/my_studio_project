@@ -1,3 +1,14 @@
-<h1>Name: <%= @member.first_name %></h1>
+<h4>Members</h4>
 
-<p>Level: <%= @member.level.level.capitalize %></p>
+<div id="member-wrapper">
+  <% @members.each do |member| %>
+
+  <div class="member">
+    <h3><a href="/members/<%= member.id %>"><%= member.first_name.capitalize %></a></h3>
+    <p>Level: <%= member.level.level.capitalize %></p>
+  </div>
+  <a href="/members/<%= member.id %>/edit">Edit Member</a>
+  <form action="/members/<%= member.id %>/delete" method="POST">
+  <input type="submit" value="Delete Member"/></form>
+  <% end %>
+</div>

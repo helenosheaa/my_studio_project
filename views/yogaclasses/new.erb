@@ -4,7 +4,7 @@
 
     <div class="form-el">
       <label for="name">Select Class:</label>
-      <select name="name_id" id="name">
+      <select name="name" id="name_id">
           <% @yogaclasses.each do |yogaclass| %>
               <option value=<%= yogaclass.name %>><%= yogaclass.name%></option>
           <% end %>
