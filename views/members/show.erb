@@ -4,7 +4,7 @@
   <% @members.each do |member| %>
 
   <div class="member">
-    <h3><a href="/members/<%= member.id %>"><%= member.first_name.capitalize %></a></h3>
+    <h3><%= member.first_name.capitalize %></h3>
     <p>Level: <%= member.level.level.capitalize %></p>
   </div>
   <a href="/members/<%= member.id %>/edit">Edit Member</a>

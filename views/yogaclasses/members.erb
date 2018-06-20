@@ -1,4 +1,15 @@
-<% for member in @members %>
-<%= member.first_name  %>
-
-<% end  %>
+<h1> Attendees: </h1>
+<table>
+  <tr>
+    <th>Member Name:</th>
+    <th></th>
+    <th>Level:</th>
+  </tr>
+  <%for member in @members %>
+  <tr>
+    <td><%= member.first_name.capitalize  %></td>
+    <td>|</td>
+    <td><%= member.level.level.capitalize  %></td>
+  </tr>
+  <% end %>
+</table>
