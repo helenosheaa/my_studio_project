@@ -68,6 +68,7 @@ yogaclass1 = YogaClass.new({
   "name" => "Fully-led Ashtanga",
   "start_time" => "2018-01-01 09:00",
   "duration" => "1.5 Hours",
+  "capacity" => 20,
   "level_id" => level3.id,
   "instructor_id" => instructor1.id
 })
@@ -77,6 +78,7 @@ yogaclass2 = YogaClass.new({
   "name" => "Yin Yoga",
   "start_time" => "2018-01-01 17:00",
   "duration" => "1 Hour",
+  "capacity" => 20,
   "level_id" => level2.id,
   "instructor_id" => instructor2.id
 })
@@ -86,6 +88,7 @@ yogaclass3 = YogaClass.new({
   "name" => "Power Flow",
   "start_time" => "2018-01-01 12:00",
   "duration" => "1 Hour",
+  "capacity" => 20,
   "level_id" => level1.id,
   "instructor_id" => instructor3.id
 })

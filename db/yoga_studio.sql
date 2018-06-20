@@ -31,6 +31,7 @@ CREATE TABLE yogaclasses
   name VARCHAR(255),
   start_time TIMESTAMP,
   duration VARCHAR(255),
+  capacity INT4,
   level_id INT8 REFERENCES levels(id) ON DELETE CASCADE,
   instructor_id INT8 REFERENCES instructors(id) ON DELETE CASCADE
 );

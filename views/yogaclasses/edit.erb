@@ -26,6 +26,11 @@
     </div>
 
     <div class="form-el">
+      <label for="capacity">Capacity:</label>
+      <input type="text" name="capacity" id="capacity" value="<%= @yogaclass.capacity  %>"/>
+    </div>
+
+    <div class="form-el">
       <label for="level_select">Select Level:</label>
       <select name="level_id" id="level_select">
           <% @levels.each do |level| %>

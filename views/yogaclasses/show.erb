@@ -7,6 +7,7 @@
     <h3><%= yogaclass.name %></a></h3>
     <p>Time: <%= yogaclass.start_time %></p>
     <p>Duration: <%= yogaclass.duration %></p>
+    <p>Capacity: <%= yogaclass.capacity %></p>
     <p>Level: <%= yogaclass.level.level.capitalize %></p>
     <p>Instructor: <%=yogaclass.instructor.first_name%></p>
   </div>
@@ -16,4 +17,3 @@
   <a href="/yogaclasses/<%= yogaclass.id %>/members"> See Attendees </a>
   <% end %>
 </div>
- 
