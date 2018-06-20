@@ -1,11 +1,15 @@
+<h1> Bookings </h1>
+<div id= "booking-wrapper">
 <table>
   <tr>
+    <div class="booking">
     <th>Booking Number:</th>
     <th></th>
     <th>Member Name:</th>
     <th></th>
     <th>Class Name:</th>
   </tr>
+  </div>
   <%for booking in @bookings %>
   <tr>
     <td> <a href="/bookings/<%= booking.id  %>"><%= booking.id  %></a> </td>
@@ -16,3 +20,4 @@
   </tr>
   <% end %>
 </table>
+</div>

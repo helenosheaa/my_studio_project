@@ -130,7 +130,7 @@ booking2.save()
 
 
 booking3 = Booking.new({
-  "member_id" => member2.id,
+  "member_id" => member3.id,
   "yogaclass_id" => yogaclass3.id
 })
 booking3.save()

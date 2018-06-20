@@ -1,27 +1,27 @@
 .form-el {
-
+text-align: center;
 }
 
 .form-wrapper .form-el input[type="submit" i] {
-
+text-align: center;
 }
 
 .form-wrapper .form-el label {
-
+text-align: center;
 }
 
 #booking-wrapper {
-
+text-align: center;
 }
 
 #instructor-wrapper {
-
+text-align: center;
 }
 
 #yogaclass-wrapper {
-
+text-align: center;
 }
 
 #member-wrapper {
-
+text-align: center;
 }
