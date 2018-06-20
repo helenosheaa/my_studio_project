@@ -1,27 +1,35 @@
 .form-el {
-text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-wrapper .form-el input[type="submit" i] {
-text-align: center;
+display: flex;
+row: wrap;
 }
 
 .form-wrapper .form-el label {
-text-align: center;
+  display: flex;
+  row: wrap;
 }
 
 #booking-wrapper {
-text-align: center;
+  display: flex;
+  row: wrap;
 }
 
 #instructor-wrapper {
-text-align: center;
+  display: flex;
+  row: wrap;
 }
 
 #yogaclass-wrapper {
-text-align: center;
+  display: flex;
+  row: wrap;
 }
 
 #member-wrapper {
-text-align: center;
+  display: flex;
+  row: wrap;
 }

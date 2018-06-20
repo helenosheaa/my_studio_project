@@ -3,5 +3,5 @@ color: #5CAB44;
 }
 
 .btn--wrapper {
-
+display: flex;
 }

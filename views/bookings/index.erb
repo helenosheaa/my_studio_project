@@ -3,20 +3,19 @@
 <table>
   <tr>
     <div class="booking">
-    <th>Booking Number:</th>
-    <th></th>
     <th>Member Name:</th>
     <th></th>
     <th>Class Name:</th>
+    <th>Update Booking:</th>
   </tr>
   </div>
   <%for booking in @bookings %>
   <tr>
-    <td> <a href="/bookings/<%= booking.id  %>"><%= booking.id  %></a> </td>
-    <td>|</td>
-    <td><%= booking.member.first_name  %></td>
+    <td><a href="/bookings/<%= booking.id  %>"><%= booking.member.first_name  %></td>
     <td>|</td>
     <td><%= booking.yogaclass.name  %></td>
+    <td>|</td>
+    <td><a href="/bookings/<%= booking.id %>/edit">Edit Booking</a></td>
   </tr>
   <% end %>
 </table>

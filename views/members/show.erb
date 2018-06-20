@@ -6,9 +6,9 @@
   <div class="member">
     <h3><%= member.first_name.capitalize %></h3>
     <p>Level: <%= member.level.level.capitalize %></p>
+    <form action="/members/<%= member.id %>/delete" method="POST">
+    <input type="submit" value="Delete Member"/></form>
   </div>
-  <a href="/members/<%= member.id %>/edit">Edit Member</a>
-  <form action="/members/<%= member.id %>/delete" method="POST">
-  <input type="submit" value="Delete Member"/></form>
+
   <% end %>
 </div>

@@ -24,6 +24,7 @@ font-family: "Open sans", sans-serif;
 font-weight: 300;
 color: #393624;
 text-decoration: none;
+display: flex;
 }
 
 a:hover, a:active, a:focus {
@@ -31,10 +32,12 @@ a:hover, a:active, a:focus {
 }
 
 nav {
-padding: 10px;
-margin: 10px;
+padding: 0;
+margin: 0 2px;
 text-align: center;
 color: #92938B;
+display: flex;
+justify-content: space-around;
 }
 
 nav ul li {
@@ -55,4 +58,8 @@ main {
 
 .flex--row {
 
+}
+
+#content {
+  align-items: center;
 }

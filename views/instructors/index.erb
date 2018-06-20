@@ -1,19 +1,19 @@
 <h1> Instructors </h1>
 <table>
   <tr>
-    <th>Instructor Number:</th>
-    <th></th>
     <th>Instructor Name:</th>
     <th></th>
     <th>Speciality:</th>
+    <th></th>
+    <th>Instructor:</th>
   </tr>
   <%for instructor in @instructors %>
   <tr>
-    <td> <a href="/instructors/<%= instructor.id  %>"><%= instructor.id  %></a> </td>
-    <td>|</td>
-    <td><%= instructor.first_name.capitalize  %></td>
+    <td><a href="/instructors/<%= instructor.id  %>"><%= instructor.first_name.capitalize  %></td>
     <td>|</td>
     <td><%= instructor.speciality.speciality.capitalize  %></td>
+    <td>|</td>
+    <td><a href="/instructors/<%= instructor.id %>/edit">Edit Instructor</a></td>
   </tr>
   <% end %>
 </table>

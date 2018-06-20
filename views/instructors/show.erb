@@ -6,9 +6,8 @@
   <div class="instructor">
     <h3><%= instructor.first_name.capitalize %></h3>
     <p>Speciality: <%= instructor.speciality.speciality.capitalize %></p>
+    <form action="/instructors/<%= instructor.id %>/delete" method="POST">
+    <input type="submit" value="Delete Instructor"></form>
   </div>
-  <a href="/instructors/<%= instructor.id %>/edit">Edit Instructor</a>
-  <form action="/instructors/<%= instructor.id %>/delete" method="POST">
-  <input type="submit" value="Delete Instructor"></form>
   <% end %>
 </div>

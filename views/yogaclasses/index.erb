@@ -1,8 +1,6 @@
 <h1> Yoga Classes </h1>
 <table>
   <tr>
-    <th>Class Number:</th>
-    <th></th>
     <th>Yoga Class:</th>
     <th></th>
     <th>Start Time:</th>
@@ -15,12 +13,13 @@
     <th></th>
     <th>Instructor:</th>
     <th></th>
+    <th>See Attendees:</th>
+    <th></th>
+    <th>Edit Class:</th>
   </tr>
   <%for yogaclass in @yogaclasses %>
   <tr>
-    <td> <a href="/yogaclasses/<%= yogaclass.id  %>"><%= yogaclass.id  %></a> </td>
-    <td>|</td>
-    <td><%= yogaclass.name.capitalize  %></td>
+    <td><a href="/yogaclasses/<%= yogaclass.id  %>"><%= yogaclass.name.capitalize  %></a></td>
     <td>|</td>
     <td><%= yogaclass.start_time %></td>
     <td>|</td>
@@ -31,6 +30,10 @@
     <td><%= yogaclass.level.level.capitalize %></td>
     <td>|</td>
     <td><%= yogaclass.instructor.first_name.capitalize %></td>
+    <td>|</td>
+    <td><a href="/yogaclasses/<%= yogaclass.id %>/members"> See Attendees </a></td>
+    <td>|</td>
+    <td><a href="/yogaclasses/<%= yogaclass.id %>/edit">Edit Class</a></td>
   </tr>
   <% end %>
 </table>

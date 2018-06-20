@@ -1,19 +1,19 @@
 <h1> Members </h1>
 <table>
   <tr>
-    <th>Member Number:</th>
-    <th></th>
     <th>Member Name:</th>
     <th></th>
     <th>Level:</th>
+    <th></th>
+    <th>Update:</th>
   </tr>
   <%for member in @members %>
   <tr>
-    <td> <a href="/members/<%= member.id  %>"><%= member.id  %></a> </td>
-    <td>|</td>
-    <td><%= member.first_name.capitalize  %></td>
+    <td> <a href="/members/<%= member.id  %>"><%= member.first_name.capitalize  %></td>
     <td>|</td>
     <td><%= member.level.level.capitalize  %></td>
+    <td>|</td>
+    <td><a href="/members/<%= member.id %>/edit">Edit Member</a></td>
   </tr>
   <% end %>
 </table>
