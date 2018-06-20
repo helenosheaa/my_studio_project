@@ -1,10 +1,12 @@
 body {
+  background-color: #F0F0F0;
 }
 
 h1, h2, h3, h4, th, tr {
 font-family: "Alegreya", serif;
 font-weight: 400;
 text-align: center;
+color: #393624;
 }
 
 p a li {
@@ -16,18 +18,19 @@ font-size: 1.2em;
 a, a:link, a:visited {
 font-family: "Open sans", sans-serif;
 font-weight: 300;
-color: black;
+color: #393624;
 text-decoration: none;
 }
 
 a:hover, a:active, a:focus {
-  color: salmon;
+  color: #835F27;
 }
 
 nav {
 padding: 50px;
 margin: 50px;
 text-align: center;
+color: #92938B;
 }
 
 nav ul li {
