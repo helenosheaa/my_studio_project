@@ -1,4 +1,5 @@
 .form-el {
+  display: inline-block;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
@@ -8,34 +9,41 @@
 align-items: center;
 margin-left: auto;
 margin-right: auto;
+display: inline-block;
 }
 
 .form-wrapper .form-el label {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  display: inline-block;
 }
 
 #booking-wrapper {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  display: inline-block;
 }
 
 #instructor-wrapper {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  display: inline-block;
 }
 
 #yogaclass-wrapper {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  display: inline-block;
 }
 
 #member-wrapper {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  display: inline-block;
+
 }

@@ -17,6 +17,10 @@ get '/bookings/new' do
   erb(:"bookings/new")
 end
 
+get '/bookings/error' do
+  erb(:"bookings/error")
+end
+
 post '/bookings' do
   yogaclass = YogaClass.find(params['yogaclass_id'])
   if !yogaclass.is_full?
