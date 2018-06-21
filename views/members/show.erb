@@ -1,4 +1,4 @@
-<h4>Members</h4>
+<h2>Members</h2>
 
 <div id="member-wrap">
   <% @members.each do |member| %>
@@ -6,7 +6,7 @@
     <h3><%= member.full_name %></h3>
     <p>Level: <%= member.level.level_type.capitalize %></p>
     <form action="/members/<%= member.id %>/delete" method="POST">
-    <input class="btn" type="submit" value="Delete Member"/></form>
+    <input class="btn-show" type="submit" value="Delete Member"/></form>
 
   <% end %>
 </div>

@@ -1,4 +1,4 @@
-<h4>Bookings</h4>
+<h2>Bookings</h2>
 
 <div id="booking-wrap">
   <% @bookings.each do |booking| %>
@@ -6,7 +6,7 @@
     <p>Member: <%= booking.member.full_name %></p>
     <p>Yoga Class: <%= booking.yogaclass.name.capitalize %></p>
     <form action="/bookings/<%= booking.id %>/delete" method="POST">
-    <input class="btn" type="submit" value="Delete Booking"/></form>
+    <input class="btn-show" type="submit" value="Delete Booking"/></form>
 
   <% end %>
 </div>

@@ -1,4 +1,4 @@
-<h4>Instructors</h4>
+<h2>Instructors</h2>
 
 <div id="instructor-wrap">
   <% @instructors.each do |instructor| %>
@@ -6,6 +6,6 @@
     <h3><%= instructor.full_name %></h3>
     <p>Speciality: <%= instructor.speciality.speciality_type.capitalize %></p>
     <form action="/instructors/<%= instructor.id %>/delete" method="POST">
-    <input class="btn" type="submit" value="Delete Instructor"></form>
+    <input class="btn-show" type="submit" value="Delete Instructor"></form>
   <% end %>
 </div>

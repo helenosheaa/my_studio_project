@@ -1,4 +1,4 @@
-<h4>Yoga Class</h4>
+<h2>Yoga Class</h2>
 
 <div id="yogaclass-wrap">
   <% @yogaclasses.each do |yogaclass| %>
@@ -10,7 +10,7 @@
     <p>Level: <%= yogaclass.level.level_type.capitalize %></p>
     <p>Instructor: <%=yogaclass.instructor.first_name%></p>
     <form action="/yogaclasses/<%= yogaclass.id %>/delete" method="POST">
-    <input class= "btn" type="submit" value="Delete Class"/></form>
+    <input class= "btn-show" type="submit" value="Delete Class"/></form>
 
   <% end %>
 </div>
