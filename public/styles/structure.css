@@ -8,6 +8,7 @@ font-family: "Alegreya", serif;
 font-weight: 400;
 text-align: center;
 color: #393624;
+margin-top: 30px;
 }
 
 .fancy-title {
@@ -49,22 +50,6 @@ justify-content: space-around;
 
 nav ul li {
 margin-bottom: 5px;
-}
-
-li {
-
-}
-
-main {
-
-}
-
-.flex {
-
-}
-
-.flex--row {
-
 }
 
 #content {

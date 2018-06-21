@@ -1,49 +1,50 @@
 .form {
-  display: inline-block;
+  display: block;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
 }
 
 .form-wrap .form input[type="submit" i] {
 align-items: center;
 margin-left: auto;
 margin-right: auto;
-display: inline-block;
+display: block;
 }
 
 .form-wrap .form label {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  display: inline-block;
+  display: block;
 }
 
 #booking-wrap {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  display: inline-block;
+  display: block;
 }
 
 #instructor-wrap {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  display: inline-block;
+  display: block;
 }
 
 #yogaclass-wrap {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  display: inline-block;
+  display: block;
 }
 
 #member-wrap {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  display: inline-block;
+  display: block;
 
 }
