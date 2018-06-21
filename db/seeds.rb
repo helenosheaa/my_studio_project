@@ -169,35 +169,35 @@ member3 = Member.new({
 })
 member3.save()
 
-booking1 = Booking.new({
-  "member_id" => member1.id,
-  "yogaclass_id" => yogaclass1.id
-})
-booking1.save()
-
-booking2 = Booking.new({
-  "member_id" => member2.id,
-  "yogaclass_id" => yogaclass2.id
-})
-booking2.save()
-
-booking3 = Booking.new({
-  "member_id" => member3.id,
-  "yogaclass_id" => yogaclass3.id
-})
-booking3.save()
-
-booking4 = Booking.new({
-  "member_id" => member3.id,
-  "yogaclass_id" => yogaclass4.id
-})
-booking4.save()
-
-booking5 = Booking.new({
-  "member_id" => member2.id,
-  "yogaclass_id" => yogaclass5.id
-})
-booking5.save()
+# booking1 = Booking.new({
+#   "member_id" => member1.id,
+#   "yogaclass_id" => yogaclass1.id
+# })
+# booking1.save()
+#
+# booking2 = Booking.new({
+#   "member_id" => member2.id,
+#   "yogaclass_id" => yogaclass2.id
+# })
+# booking2.save()
+#
+# booking3 = Booking.new({
+#   "member_id" => member3.id,
+#   "yogaclass_id" => yogaclass3.id
+# })
+# booking3.save()
+#
+# booking4 = Booking.new({
+#   "member_id" => member3.id,
+#   "yogaclass_id" => yogaclass4.id
+# })
+# booking4.save()
+#
+# booking5 = Booking.new({
+#   "member_id" => member2.id,
+#   "yogaclass_id" => yogaclass5.id
+# })
+# booking5.save()
 
 
 binding.pry
