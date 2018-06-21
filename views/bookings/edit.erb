@@ -7,9 +7,9 @@
     <select name="member_id" id="member_select" selected="<%= @booking.member_id  %>">
       <% @members.each do |member| %>
         <% if member.id == @booking.member_id %>
-          <option value=<%= member.id %> selected><%= member.first_name.capitalize %></option>
+          <option value=<%= member.id %> selected><%= member.full_name %></option>
         <% else %>
-          <option value=<%= member.id %>><%= member.first_name.capitalize %></option>
+          <option value=<%= member.id %>><%= member.full_name %></option>
         <% end %>
       <% end %>
     </select>
@@ -21,6 +21,8 @@
           <% @yogaclasses.each do |yogaclass| %>
           <% if yogaclass.id == @booking.yogaclass_id  %>
               <option value=<%= yogaclass.id %>selected><%= yogaclass.name.capitalize %></option>
+            <% else %>
+              <option value=<%= yogaclass.id %>><%= yogaclass.name.capitalize %></option>
           <% end %>
           <% end %>
         </select>
