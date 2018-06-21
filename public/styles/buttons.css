@@ -3,13 +3,11 @@ background-color: #92938B;
 padding: 8px 10px;
 font-family:  "Open sans", sans-serif;
 border: solid;
+display: block;
+margin-top: 10px;
 }
 
 .btn:hover {
 color: #835F27;
 font-family:  "Open sans", sans-serif;
-}
-
-.btn--wrapper {
-display: flex;
 }
