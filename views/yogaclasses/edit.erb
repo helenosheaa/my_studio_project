@@ -4,7 +4,7 @@
 
     <div class="form">
       <label for="name">Class:</label>
-      <select name="name" id="name_id" >
+      <select class="drop-down" name="name" id="name_id" >
           <% @yogaclasses.each do |yogaclass| %>
           <% if yogaclass.name == @yogaclass.name  %>
               <option value="<%= yogaclass.name %>" selected = "selected"><%= yogaclass.name.capitalize%></option>
@@ -24,7 +24,7 @@
       <label for="duration">Duration:</label>
       <input type="text" name="duration" id="duration" value="<%= @yogaclass.duration  %>"/>
     </div>
-    
+
     <div class="form">
       <label for="capacity">Capacity:</label>
       <input type="text" name="capacity" id="capacity" value="<%= @yogaclass.capacity  %>"/>
@@ -32,7 +32,7 @@
 
     <div class="form">
       <label for="level_select">Select Level:</label>
-      <select name="level_id" id="level_select">
+      <select class="drop-down" name="level_id" id="level_select">
           <% @levels.each do |level| %>
           <% if level.id == @yogaclass.level_id %>
               <option value="<%= level.id  %>" selected="selected"><%= level.level_type.capitalize %></option>
@@ -45,7 +45,7 @@
 
     <div class="form">
       <label for="instructor_select">Select Instructor:</label>
-      <select name="instructor_id" id="instructor_select">
+      <select class="drop-down" name="instructor_id" id="instructor_select">
           <% @instructors.each do |instructor| %>
           <% if instructor.id == @yogaclass.instructor_id %>
               <option value="<%= instructor.id %>" selected = "selected"><%= instructor.first_name.capitalize %></option>

@@ -14,7 +14,7 @@
 
     <div class="form">
         <label for="speciality_select">Speciality:</label>
-        <select name="speciality_id" id="speciality_select" >
+        <select class="drop-down" name="speciality_id" id="speciality_select" >
           <% @specialities.each do |speciality| %>
           <% if speciality.id == @instructor.speciality_id %>
               <option value="<%= speciality.id %>" selected = "selected"><%= speciality.speciality_type.capitalize %></option>

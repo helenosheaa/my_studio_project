@@ -4,7 +4,7 @@
 
     <div class="form">
       <label for="name">Select Class:</label>
-      <select name="name" id="name_id">
+      <select class="drop-down" name="name" id="name_id">
           <% @yogaclasses.each do |yogaclass| %>
               <option value=<%= yogaclass.name %>><%= yogaclass.name%></option>
           <% end %>
@@ -20,7 +20,7 @@
       <label for="duration">Duration:</label>
       <input type="text" name="duration" id="duration" required/>
     </div>
-    
+
     <div class="form">
       <label for="capacity">Capacity:</label>
       <input type="text" name="capacity" id="capacity" required/>
@@ -28,7 +28,7 @@
 
     <div class="form">
       <label for="level">Select Level:</label>
-      <select name="level_id" id="level">
+      <select class="drop-down" name="level_id" id="level">
           <% @yogaclasses.each do |yogaclass| %>
               <option value=<%= yogaclass.level_id %>><%= yogaclass.level.level_type.capitalize %></option>
           <% end %>
@@ -37,7 +37,7 @@
 
     <div class="form">
       <label for="instructor_select">Select Instructor:</label>
-      <select name="instructor_id" id="instructor_select">
+      <select class="drop-down" name="instructor_id" id="instructor_select">
           <% @instructors.each do |instructor| %>
               <option value=<%= instructor.id %>><%= instructor.first_name.capitalize %></option>
           <% end %>

@@ -19,7 +19,7 @@
   </tr>
   <%for yogaclass in @yogaclasses %>
   <tr>
-    <td><a href="/yogaclasses/<%= yogaclass.id  %>"><%= yogaclass.name.capitalize  %></a></td>
+    <td><a href="/yogaclasses/<%= yogaclass.id  %>"><div class= "yoga-class"><%= yogaclass.name.capitalize  %></div></a></td>
     <td>|</td>
     <td><%= yogaclass.start_time %></td>
     <td>|</td>

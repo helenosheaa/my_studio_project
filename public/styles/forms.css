@@ -4,6 +4,9 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  font-family: "Open sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
 }
 
 .form-wrap .form input[type="submit" i] {
@@ -11,6 +14,10 @@ align-items: center;
 margin-left: auto;
 margin-right: auto;
 display: block;
+font-family: "Open sans", sans-serif;
+font-weight: 300;
+font-size: 1.2em;
+outline: none;
 }
 
 .form-wrap .form label {
@@ -18,33 +25,35 @@ display: block;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  font-family: "Open sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
 }
 
-#booking-wrap {
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+.drop-down {
+  font-family: "Open sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  color: #393624;
+  background-color: #92938B;
+  outline: none;
 }
 
-#instructor-wrap {
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+.drop-down:hover {
+  color: #835F27;
 }
 
-#yogaclass-wrap {
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+.drop-down option:hover{
+  background: #835F27;
 }
 
-#member-wrap {
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+.drop-down input {
+  background: #835F27;
+}
 
+.form input {
+  font-family: "Open sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  outline: none;
 }

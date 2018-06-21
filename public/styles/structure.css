@@ -15,10 +15,17 @@ margin-top: 30px;
 font-size: 10.8em;
 font-family: "Alegreya", serif;
 font-weight: 400;
+margin-top: 450px;
+margin-bottom: 0;
 }
 
 .fancy-title:hover {
     color: #835F27;
+}
+
+.yoga-class {
+  font-family: "Alegreya", serif;
+  font-size: 1.2em;
 }
 
 p a li {
@@ -33,6 +40,7 @@ font-weight: 300;
 color: #393624;
 text-decoration: none;
 display: flex;
+outline: none;
 }
 
 a:hover, a:active, a:focus {
@@ -52,6 +60,40 @@ nav ul li {
 margin-bottom: 5px;
 }
 
+.selected {
+  background-color: #835F27;
+  outline: none;
+}
+
 #content {
   align-items: center;
+}
+
+#booking-wrap {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+#instructor-wrap {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+#yogaclass-wrap {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+#member-wrap {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  position: relative;
 }

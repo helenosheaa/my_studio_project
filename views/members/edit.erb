@@ -14,7 +14,7 @@
 
     <div class="form">
         <label for="level_select">Level:</label>
-        <select name="level_id" id="level_select">
+        <select class="drop-down" name="level_id" id="level_select">
           <% @levels.each do |level| %>
           <% if level.id == @member.level_id  %>
               <option value="<%= level.id %>" "selected"><%= level.level_type.capitalize %></option>

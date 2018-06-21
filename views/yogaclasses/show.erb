@@ -3,7 +3,6 @@
 <div id="yogaclass-wrap">
   <% @yogaclasses.each do |yogaclass| %>
 
-  <div class="yogaclass">
     <h3><%= yogaclass.name %></a></h3>
     <p>Time: <%= yogaclass.start_time %></p>
     <p>Duration: <%= yogaclass.duration %></p>
@@ -11,7 +10,7 @@
     <p>Level: <%= yogaclass.level.level_type.capitalize %></p>
     <p>Instructor: <%=yogaclass.instructor.first_name%></p>
     <form action="/yogaclasses/<%= yogaclass.id %>/delete" method="POST">
-    <input type="submit" value="Delete Class"/></form>
-  </div>
+    <input class= "btn" type="submit" value="Delete Class"/></form>
+
   <% end %>
 </div>
