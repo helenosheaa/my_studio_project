@@ -1,8 +1,8 @@
 <h2>Edit Yoga Class</h2>
 <form method="POST" action="/yogaclasses/<%= @yogaclass.id  %>">
-  <div class="form-wrapper">
+  <div class="form-wrap">
 
-    <div class="form-el">
+    <div class="form">
       <label for="name">Class:</label>
       <select name="name" id="name_id" >
           <% @yogaclasses.each do |yogaclass| %>
@@ -15,22 +15,22 @@
         </select>
     </div>
 
-    <div class="form-el">
+    <div class="form">
       <label for="start_time">Time:</label>
       <input type="datetime-local" name="start_time" id="datetime" value="<%= @yogaclass.start_time  %>"/>
     </div>
 
-    <div class="form-el">
+    <div class="form">
       <label for="duration">Duration:</label>
       <input type="text" name="duration" id="duration" value="<%= @yogaclass.duration  %>"/>
     </div>
 
-    <div class="form-el">
+    <div class="form">
       <label for="capacity">Capacity:</label>
       <input type="text" name="capacity" id="capacity" value="<%= @yogaclass.capacity  %>"/>
     </div>
 
-    <div class="form-el">
+    <div class="form">
       <label for="level_select">Select Level:</label>
       <select name="level_id" id="level_select">
           <% @levels.each do |level| %>
@@ -43,7 +43,7 @@
         </select>
     </div>
 
-    <div class="form-el">
+    <div class="form">
       <label for="instructor_select">Select Instructor:</label>
       <select name="instructor_id" id="instructor_select">
           <% @instructors.each do |instructor| %>
@@ -56,8 +56,8 @@
         </select>
     </div>
 
-    <div class="form-el">
-      <input type="submit" value="Edit Yoga Class"/>
+    <div class="form">
+      <input class="btn" type="submit" value="Edit Yoga Class"/>
     </div>
 
   </div>

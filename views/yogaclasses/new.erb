@@ -1,8 +1,8 @@
 <h2>New Yoga Class</h2>
 <form method="POST" action="/yogaclasses">
-  <div class="form-wrapper">
+  <div class="form-wrap">
 
-    <div class="form-el">
+    <div class="form">
       <label for="name">Select Class:</label>
       <select name="name" id="name_id">
           <% @yogaclasses.each do |yogaclass| %>
@@ -11,22 +11,22 @@
         </select>
     </div>
 
-    <div class="form-el">
+    <div class="form">
       <label for="start_time">Time:</label>
       <input type="datetime-local" name="start_time" id="datetime"/>
     </div>
 
-    <div class="form-el">
+    <div class="form">
       <label for="duration">Duration:</label>
       <input type="text" name="duration" id="duration" required/>
     </div>
 
-    <div class="form-el">
+    <div class="form">
       <label for="capacity">Capacity:</label>
       <input type="text" name="capacity" id="capacity" required/>
     </div>
 
-    <div class="form-el">
+    <div class="form">
       <label for="level">Select Level:</label>
       <select name="level_id" id="level">
           <% @yogaclasses.each do |yogaclass| %>
@@ -35,7 +35,7 @@
         </select>
     </div>
 
-    <div class="form-el">
+    <div class="form">
       <label for="instructor_select">Select Instructor:</label>
       <select name="instructor_id" id="instructor_select">
           <% @instructors.each do |instructor| %>
@@ -44,8 +44,8 @@
         </select>
     </div>
 
-    <div class="form-el">
-      <input type="submit" value="Add Yoga Class"/>
+    <div class="form">
+      <input class= "btn" type="submit" value="Add Yoga Class"/>
     </div>
 
   </div>

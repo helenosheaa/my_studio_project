@@ -1,8 +1,8 @@
 <h2>Edit Booking</h2>
 <form method="POST" action="/bookings/<%= @booking.id  %>">
-  <div class="form-wrapper">
+  <div class="form-wrap">
 
-      <div class="form-el">
+      <div class="form">
     <label for="member_select">Member:</label>
     <select name="member_id" id="member_select" selected="<%= @booking.member_id  %>">
       <% @members.each do |member| %>
@@ -15,7 +15,7 @@
     </select>
   </div>
 
-    <div class="form-el">
+    <div class="form">
         <label for="yogaclass_select">Yoga Class:</label>
         <select name="yogaclass_id" id="yogaclass_select" selected="<%= @booking.yogaclass_id  %>">
           <% @yogaclasses.each do |yogaclass| %>
@@ -28,8 +28,8 @@
         </select>
       </div>
 
-    <div class="form-el">
-      <input type="submit" value="Edit Booking"/>
+    <div class="form">
+      <input class= "btn" type="submit" value="Edit Booking"/>
     </div>
 
   </div>

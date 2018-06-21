@@ -1,8 +1,13 @@
 .btn {
-background-color: #5CAB44;
-padding: 50px;
-outline-color: #5CAB44;
+background-color: #92938B;
+padding: 8px 10px;
+font-family:  "Open sans", sans-serif;
+border: solid;
+}
 
+.btn:hover {
+color: #835F27;
+font-family:  "Open sans", sans-serif;
 }
 
 .btn--wrapper {

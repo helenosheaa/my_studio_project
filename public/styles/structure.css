@@ -10,8 +10,14 @@ text-align: center;
 color: #393624;
 }
 
-h6 {
-  font-size: 10.8em;
+.fancy-title {
+font-size: 10.8em;
+font-family: "Alegreya", serif;
+font-weight: 400;
+}
+
+.fancy-title:hover {
+    color: #835F27;
 }
 
 p a li {

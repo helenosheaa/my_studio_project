@@ -1,18 +1,18 @@
 <h2>New Instructor</h2>
 <form method="POST" action="/instructors">
-  <div class="form-wrapper">
+  <div class="form-wrap">
 
-    <div class="form-el">
+    <div class="form">
       <label for="first_name">First Name:</label>
       <input type="text" name="first_name" id="first_name" required/>
     </div>
 
-    <div class="form-el">
+    <div class="form">
       <label for="last_name">Last Name:</label>
       <input type="text" name="last_name" id="last_name" required/>
     </div>
 
-    <div class="form-el">
+    <div class="form">
         <label for="speciality">Speciality:</label>
         <select name="speciality_id" id="speciality">
           <% @instructors.each do |instructor|%>
@@ -22,8 +22,8 @@
         </select>
     </div>
 
-    <div class="form-el">
-      <input type="submit" value="Add Instructor"/>
+    <div class="form">
+      <input class="btn" type="submit" value="Add Instructor"/>
     </div>
 
   </div>
